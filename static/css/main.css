@@ -6,6 +6,15 @@ html, body {
 }
 
 /* line 9, ../../scss/main.scss */
+nav.navbar a {
+  cursor: pointer;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* line 14, ../../scss/main.scss */
 nav.navbar-slidein {
   position: fixed;
   top: 35px;
@@ -21,7 +30,7 @@ nav.navbar-slidein {
   transition: 0.3s;
 }
 
-/* line 19, ../../scss/main.scss */
+/* line 24, ../../scss/main.scss */
 nav.navbar-slidein-active {
   -moz-transform: translate(0px, 1em);
   -ms-transform: translate(0px, 1em);

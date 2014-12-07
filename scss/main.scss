@@ -6,6 +6,11 @@ html,body {
   padding: 0;
 }
 
+nav.navbar a {
+  cursor: pointer;
+  @include user-select(none);
+}
+
 nav.navbar-slidein {
   position: fixed;
   top: 35px;
