@@ -1,0 +1,3 @@
+[submodule "static/js/angular-scroll"]
+	path = static/js/angular-scroll
+	url = https://github.com/oblador/angular-scroll.git

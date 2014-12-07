@@ -25,16 +25,16 @@
                     <a class="navbar-brand" data-ng-click="menuClick()">
                         <span class="glyphicon glyphicon-th-list" aria-hidden="true" data-ng-click="menuClick"></span>
                     </a>
-                    <a class="navbar-brand">Meaghan & Andy</a>
+                    <a class="navbar-brand" data-ng-click="setHash('home')">Meaghan & Andy</a>
                 </div>
             </div>
         </nav>
         <nav class="navbar navbar-default navbar-slidein hidden-md hidden-lg" role="navigation" data-ng-class="{'navbar-slidein-active': mobileMenu}">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li><a>Venues</a></li>
-                    <li><a>Wedding Party</a></li>
-                    <li><a>Registry</a></li>
+                    <li><a data-ng-click="setHash('venues')">Venues</a></li>
+                    <li><a data-ng-click="setHash('venues')">Wedding Party</a></li>
+                    <li><a data-ng-click="setHash('venues')">Registry</a></li>
                 </ul>
             </div>
         </nav>
@@ -42,23 +42,27 @@
         <nav class="navbar navbar-default navbar-fixed-top hidden-xs hidden-sm" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Meaghan & Andy</a>
+                    <a class="navbar-brand" data-ng-click="setHash('home')">Meaghan & Andy</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a>Venues</a></li>
-                    <li><a>Wedding Party</a></li>
-                    <li><a>Registry</a></li>
+                    <li><a data-ng-click="setHash('venues')">Venues</a></li>
+                    <li><a data-ng-click="setHash('venues')">Wedding Party</a></li>
+                    <li><a data-ng-click="setHash('venues')">Registry</a></li>
                 </ul>
             </div>
         </nav>
 
-        <div class="container-fluid navfix">
-            <div class="row text-center frontpage">
+        <div id="home" class="container-fluid navfix">
+            <div class="row text-center page">
                 <div class="col-md-12"><img src="/static/media/hands.png" class="img-hands" /></div>
                 <div class="col-md-12">
                     <h2>Meaghan Averill <span><h4>&</h4></span> Andrew Potter</h2>
                 </div>
                 <div class="col-md-12"><h5>July 11, 2014</h5></div>
+            </div>
+
+            <div id="venues" class="row text-center page">
+                <div class="col-md-12"><h2>Ceremony</h2></div>
             </div>
         </div>
     </body>

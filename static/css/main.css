@@ -44,10 +44,10 @@ nav.navbar-slidein {
   -ms-transform: translate(-220px, 1em);
   -webkit-transform: translate(-220px, 1em);
   transform: translate(-220px, 1em);
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
@@ -63,7 +63,7 @@ nav.navbar-slidein-active {
 
 /* line 53, ../../scss/main.scss */
 div.navfix {
-  padding-top: 70px;
+  padding-top: 50px;
   height: 100%;
 }
 
@@ -88,13 +88,14 @@ div.navfix {
 }
 
 /* line 76, ../../scss/main.scss */
-.frontpage {
+div.page {
+  padding-top: 20px;
   min-height: 100%;
   padding-bottom: 20px;
 }
 
 /* Bootstrap color changes */
-/* line 82, ../../scss/main.scss */
+/* line 83, ../../scss/main.scss */
 nav {
   background-color: #F5D76E !important;
 }

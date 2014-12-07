@@ -42,7 +42,7 @@ nav.navbar-slidein {
   border-top: none;
 
   @include translate(-220px);
-  @include transition(.3s);
+  @include transition(.25s);
   @include border-radius(0px);
 }
 
@@ -51,7 +51,7 @@ nav.navbar-slidein-active {
 }
 
 div.navfix {
-  padding-top: 70px;
+  padding-top: 50px;
   height: 100%;
 }
 
@@ -73,7 +73,8 @@ div.navfix {
   }
 }
 
-.frontpage {
+div.page {
+  padding-top: 20px;
   min-height: 100%;
   padding-bottom: 20px;
 }
