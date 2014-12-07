@@ -1,0 +1,21 @@
+@import "compass/css3.scss";
+
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav.navbar-slidein {
+  position: fixed;
+  top: 35px;
+  width: 200px;
+  min-height: 100%;
+
+  @include translate(-200px);
+  @include transition(.3s);
+}
+
+nav.navbar-slidein-active {
+  @include translate(0px);
+}
