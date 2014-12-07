@@ -68,13 +68,33 @@ div.navfix {
 }
 
 /* line 58, ../../scss/main.scss */
+.img-hands {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px;
+}
+@media (min-width: 992px) {
+  /* line 58, ../../scss/main.scss */
+  .img-hands {
+    width: 250px;
+    height: 250px;
+    -moz-border-radius: 250px;
+    -webkit-border-radius: 250px;
+    border-radius: 250px;
+  }
+}
+
+/* line 76, ../../scss/main.scss */
 .frontpage {
   min-height: 100%;
   padding-bottom: 20px;
 }
 
 /* Bootstrap color changes */
-/* line 64, ../../scss/main.scss */
+/* line 82, ../../scss/main.scss */
 nav {
   background-color: #F5D76E !important;
 }

@@ -55,6 +55,24 @@ div.navfix {
   height: 100%;
 }
 
+.img-hands {
+  $hands-large: 250px;
+  $hands-small: 150px;
+
+  margin-top: 50px;
+  width: $hands-small;
+  height: $hands-small;
+
+  @include border-radius($hands-small);
+
+  @media (min-width: $size-md) {
+    width: $hands-large;
+    height: $hands-large;
+
+    @include border-radius($hands-large);
+  }
+}
+
 .frontpage {
   min-height: 100%;
   padding-bottom: 20px;
