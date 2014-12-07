@@ -1,26 +1,66 @@
 @import "compass/css3.scss";
 
+$size-lg: 1200px;
+$size-md: 992px;
+$size-sm: 768px;
+$size-xs: 480px;
+
 html,body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-nav.navbar a {
-  cursor: pointer;
-  @include user-select(none);
+body {
+  color:#777;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:14px;
+  font-weight: 400;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+nav.navbar {
+  z-index: 1;
+
+  a {
+    cursor: pointer;
+    @include user-select(none);
+  }
 }
 
 nav.navbar-slidein {
   position: fixed;
-  top: 35px;
-  width: 200px;
+  top: 36px;
+  width: 220px;
   min-height: 100%;
+  z-index: 100;
 
-  @include translate(-200px);
+  border-top: none;
+
+  @include translate(-220px);
   @include transition(.3s);
+  @include border-radius(0px);
 }
 
 nav.navbar-slidein-active {
   @include translate(0px);
+}
+
+div.navfix {
+  padding-top: 50px;
+  height: 100%;
+}
+
+.frontpage {
+  min-height: 100%;
+  padding-bottom: 20px;
+}
+
+/* Bootstrap color changes */
+nav {
+  background-color: #F5D76E !important;
 }
