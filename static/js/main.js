@@ -19,7 +19,7 @@ app.controller('WeddingController', ['$location', '$document', '$scope', functio
             }
 
             var elem = angular.element(document.getElementById(target));
-            $document.scrollToElementAnimated(elem);
+            $document.scrollToElementAnimated(elem, 50);
 
         } else {
             $location.hash(target);

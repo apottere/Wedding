@@ -79,16 +79,15 @@ div.navfix {
 
 div#home div.home {
   border-top: none !important;
-  padding-bottom: 150px;
+  padding-bottom: 80px;
 }
 
 #venues {
-  background-color: $yellow;
   height: 1500px;
 }
 
 div.page {
-  padding-top: 60px;
+  padding-top: 20px;
   min-height: 100%;
   padding-bottom: 80px;
 }
@@ -109,23 +108,25 @@ span.scroll-down {
   display: block;
 
   &:before {
+    $height: 70px;
+
     cursor: pointer;
     display: inline-block;
-    height: 30px;
+    height: $height - 10;
     content: "\e114";
     font-family: 'Glyphicons Halflings';
     box-sizing: border-box;
+    line-height: 40px;
+    font-size: 17px;
 
     position: relative;
-    top: -30px;
+    top: -($height / 2);
 
     color: #777;
-    width: 61px;
+    width: 63px;
     background-color: $yellow;
-    border-top-left-radius: 110px;  /* 100px of height + 10px of border */
-    border-top-right-radius: 110px; /* 100px of height + 10px of border */
     border: 10px solid $yellow;
-    border-bottom: 0;
+    @include border-radius(100px);
   }
 }
 

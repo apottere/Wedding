@@ -33,6 +33,7 @@
         <nav class="navbar navbar-default navbar-slidein hidden-md hidden-lg" role="navigation" data-ng-class="{'navbar-slidein-active': mobileMenu}">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
+                    <li><a data-ng-click="setHash('story')">Story</a></li>
                     <li><a data-ng-click="setHash('venues')">Venues</a></li>
                     <li><a data-ng-click="setHash('venues')">Wedding Party</a></li>
                     <li><a data-ng-click="setHash('venues')">Registry</a></li>
@@ -46,6 +47,7 @@
                     <a class="navbar-brand" data-ng-click="setHash('home')">Meaghan & Andy</a>
                 </div>
                 <ul class="nav navbar-nav">
+                    <li><a data-ng-click="setHash('story')">Story</a></li>
                     <li><a data-ng-click="setHash('venues')">Venues</a></li>
                     <li><a data-ng-click="setHash('venues')">Wedding Party</a></li>
                     <li><a data-ng-click="setHash('venues')">Registry</a></li>
@@ -62,7 +64,11 @@
                 <div class="col-md-12"><h5>July 11, 2015</h5></div>
             </div>
 
-            <span class="scroll-down" data-ng-click="setHash('venues')"></span>
+            <span class="scroll-down" data-ng-click="setHash('story')"></span>
+            <div id="story" class="row text-center page">
+                <div class="col-md-12"><h2>Story</h2></div>
+            </div>
+
             <div id="venues" class="row text-center page">
                 <div class="col-md-12"><h2>Ceremony</h2></div>
             </div>

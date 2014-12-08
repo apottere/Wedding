@@ -92,23 +92,22 @@ div.navfix {
 /* line 80, ../../scss/main.scss */
 div#home div.home {
   border-top: none !important;
-  padding-bottom: 150px;
+  padding-bottom: 80px;
 }
 
 /* line 85, ../../scss/main.scss */
 #venues {
-  background-color: #F5D76E;
   height: 1500px;
 }
 
-/* line 90, ../../scss/main.scss */
+/* line 89, ../../scss/main.scss */
 div.page {
-  padding-top: 60px;
+  padding-top: 20px;
   min-height: 100%;
   padding-bottom: 80px;
 }
 
-/* line 96, ../../scss/main.scss */
+/* line 95, ../../scss/main.scss */
 span.scroll-down {
   height: 0;
   margin-top: -10px;
@@ -124,29 +123,29 @@ span.scroll-down {
   text-align: center;
   display: block;
 }
-/* line 111, ../../scss/main.scss */
+/* line 110, ../../scss/main.scss */
 span.scroll-down:before {
   cursor: pointer;
   display: inline-block;
-  height: 30px;
+  height: 60px;
   content: "\e114";
   font-family: 'Glyphicons Halflings';
   box-sizing: border-box;
+  line-height: 40px;
+  font-size: 17px;
   position: relative;
-  top: -30px;
+  top: -35px;
   color: #777;
-  width: 61px;
+  width: 63px;
   background-color: #F5D76E;
-  border-top-left-radius: 110px;
-  /* 100px of height + 10px of border */
-  border-top-right-radius: 110px;
-  /* 100px of height + 10px of border */
   border: 10px solid #F5D76E;
-  border-bottom: 0;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
 }
 
 /* Bootstrap color changes */
-/* line 133, ../../scss/main.scss */
+/* line 134, ../../scss/main.scss */
 nav {
   background-color: #F5D76E !important;
 }
