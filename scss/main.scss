@@ -5,26 +5,30 @@ $size-md: 992px;
 $size-sm: 768px;
 $size-xs: 480px;
 
-html,body {
-  height: 100%;
+$yellow: #F5D76E;
+
+html {
+  min-height: 100%;
+}
+
+html, body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
+  min-height: 100%;
   color:#777;
   font-family: 'Source Sans Pro', sans-serif;
   font-size:14px;
   font-weight: 400;
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 nav.navbar {
   z-index: 1;
+  border-bottom: none;
 
   a {
     cursor: pointer;
@@ -35,14 +39,14 @@ nav.navbar {
 nav.navbar-slidein {
   position: fixed;
   top: 36px;
-  width: 220px;
+  width: 200px;
   min-height: 100%;
   z-index: 100;
 
-  border-top: none;
+  border: none;
 
   @include translate(-220px);
-  @include transition(.25s);
+  @include transition(.2s);
   @include border-radius(0px);
 }
 
@@ -73,13 +77,59 @@ div.navfix {
   }
 }
 
+div#home div.home {
+  border-top: none !important;
+  padding-bottom: 150px;
+}
+
+#venues {
+  background-color: $yellow;
+  height: 1500px;
+}
+
 div.page {
-  padding-top: 20px;
+  padding-top: 60px;
   min-height: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
+}
+
+span.scroll-down {
+  height: 0;
+  margin-top: -10px;
+  margin-left: -20px;
+  margin-right: -20px;
+  width: auto;
+
+  overflow: visible;
+  @include user-select(none);
+
+  border-top: 10px solid $yellow;
+
+  text-align: center;
+  display: block;
+
+  &:before {
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    content: "\e114";
+    font-family: 'Glyphicons Halflings';
+    box-sizing: border-box;
+
+    position: relative;
+    top: -30px;
+
+    color: #777;
+    width: 61px;
+    background-color: $yellow;
+    border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+    border-top-right-radius: 110px; /* 100px of height + 10px of border */
+    border: 10px solid $yellow;
+    border-bottom: 0;
+  }
 }
 
 /* Bootstrap color changes */
 nav {
-  background-color: #F5D76E !important;
+  background-color: $yellow !important;
 }
