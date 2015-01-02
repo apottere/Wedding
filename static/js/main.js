@@ -13,12 +13,17 @@ app.controller('WeddingController', ['$location', '$document', '$scope', functio
 
     $scope.setHash = function(target) {
         $scope.mobileMenu = false;
+        var elem = angular.element(document.getElementById(target));
+
+        if(!elem || !elem.length) {
+            return;
+        }
+
         if(window.history && window.history.pushState) {
             if($location.hash() != target) {
                 window.history.pushState({}, "", window.location.pathname + '#' + target);
             }
 
-            var elem = angular.element(document.getElementById(target));
             $document.scrollToElementAnimated(elem, 50);
 
         } else {

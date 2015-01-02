@@ -26,6 +26,22 @@ body {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #337ab7;
+
+  &:visited &:focus {
+    color: #337ab7;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: #23527c;
+    text-decoration: none;
+  }
+}
+
 nav.navbar {
   z-index: 100;
   border-bottom: none;
@@ -96,7 +112,7 @@ span.scroll-down {
     top: -($height / 2);
 
     color: #777;
-    width: 63px;
+    width: 61px;
     background-color: $yellow;
     border: 10px solid $yellow;
     @include border-radius(100px);
@@ -124,14 +140,60 @@ span.scroll-down {
 div#home div.home {
   border-top: none !important;
   padding-bottom: 81px;
-}
-
-#venues {
-  height: 1500px;
-}
-
-#home div.home {
   padding-top: 20px;
+}
+
+$venue-img-height: 235px;
+$venue-label-height: 60px;
+$venue-header-height: 100px;
+$venue-header-margin: 70px;
+#venues {
+  background-color: #95A5A6;
+
+
+  $venue-padding: 250px;
+  @media (min-width: $size-md) {
+    padding-top: $venue-padding - $venue-header-height;
+    padding-bottom: $venue-padding;
+  }
+}
+
+#registry {
+  @media (min-width: $size-md) {
+    height: 600px;
+  }
+}
+
+#footer {
+  background-color: $yellow;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  text-align: center;
+
+  @media (min-width: $size-md) {
+    height: 150px;
+    line-height: 150px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.venue-header {
+  color: white;
+
+  font-size: 55px;
+  font-weight: 700;
+
+  @media (min-width: $size-md) {
+    height: $venue-header-height;
+    line-height: $venue-header-height;
+    margin-bottom: $venue-header-margin;
+
+    font-size: 75px;
+  }
 }
 
 .ceremony-img {
@@ -146,8 +208,6 @@ div#home div.home {
   text-align: center;
 }
 
-$venue-img-height: 235px;
-$venue-label-height: 60px;
 .venue-block {
   display: inline-block;
   margin-top: 40px;
@@ -163,6 +223,10 @@ $venue-label-height: 60px;
     line-height: $venue-label-height;
 
     background-color: $yellow;
+  }
+
+  @media (min-width: $size-md) {
+    margin-top: 0px;
   }
 }
 
@@ -198,11 +262,10 @@ $venue-label-height: 60px;
 
   a {
     color: $link-color;
-    text-decoration: none;
     font-size: 15px;
     font-weight: 600;
 
-    &:visited {
+    &:visited &:focus {
       color: $link-color;
     }
 
@@ -238,6 +301,40 @@ div.venue-info-block-show {
 
   @media (min-width: $size-md) {
     display: none;
+  }
+}
+
+.registry-row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $yellow;
+}
+
+.registry-block {
+  display: inline-block;
+  background-color: $yellow;
+  height: 70px;
+  margin: auto;
+  padding-left: 10px;
+
+  img {
+    height: 50px;
+    width: 50px;
+    margin: 10px 0 10px 0;
+    float: left;
+
+    @include border-radius(100px);
+  }
+
+  p {
+    height: 70px;
+    line-height: 70px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    float: left;
+
+    font-size: 20px;
+    font-weight: 600;
   }
 }
 
