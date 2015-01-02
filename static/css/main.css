@@ -125,7 +125,7 @@ div#home div.home {
 /* line 107, ../../scss/main.scss */
 .venue-info-block {
   z-index: 2;
-  padding-top: 60px;
+  padding-top: 70px;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -135,40 +135,35 @@ div#home div.home {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 118, ../../scss/main.scss */
-.venue-info-block:hover {
-  opacity: 0;
-}
 @media (min-width: 992px) {
   /* line 118, ../../scss/main.scss */
   .venue-info-block:hover {
     opacity: 100;
   }
 }
-/* line 126, ../../scss/main.scss */
+/* line 124, ../../scss/main.scss */
 .venue-info-block a {
   color: #f1c40f;
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
 }
-/* line 132, ../../scss/main.scss */
+/* line 130, ../../scss/main.scss */
 .venue-info-block a:visited {
   color: #f1c40f;
 }
-/* line 136, ../../scss/main.scss */
+/* line 134, ../../scss/main.scss */
 .venue-info-block a:hover {
   color: #D3AC11;
 }
 
-/* line 142, ../../scss/main.scss */
-.venue-info-block-show {
+/* line 140, ../../scss/main.scss */
+div.venue-info-block-show {
   opacity: 100;
 }
 
-/* line 146, ../../scss/main.scss */
+/* line 144, ../../scss/main.scss */
 .venue-info-button {
-  opacity: 100;
   position: absolute;
   top: 0;
   left: 0;
@@ -189,13 +184,13 @@ div#home div.home {
   user-select: none;
 }
 @media (min-width: 992px) {
-  /* line 146, ../../scss/main.scss */
+  /* line 144, ../../scss/main.scss */
   .venue-info-button {
     display: none;
   }
 }
 
-/* line 170, ../../scss/main.scss */
+/* line 167, ../../scss/main.scss */
 .venue-img {
   display: inline-block;
   background-repeat: no-repeat;
@@ -207,14 +202,14 @@ div#home div.home {
   color: white;
 }
 
-/* line 182, ../../scss/main.scss */
+/* line 179, ../../scss/main.scss */
 div.page {
   padding-top: 40px;
   min-height: 100%;
   padding-bottom: 80px;
 }
 
-/* line 188, ../../scss/main.scss */
+/* line 185, ../../scss/main.scss */
 span.scroll-down {
   height: 0;
   margin-top: -10px;
@@ -230,7 +225,7 @@ span.scroll-down {
   text-align: center;
   display: block;
 }
-/* line 203, ../../scss/main.scss */
+/* line 200, ../../scss/main.scss */
 span.scroll-down:before {
   cursor: pointer;
   display: inline-block;
@@ -252,7 +247,7 @@ span.scroll-down:before {
 }
 
 /* Bootstrap color changes */
-/* line 227, ../../scss/main.scss */
+/* line 224, ../../scss/main.scss */
 nav {
   background-color: #F5D76E !important;
 }
