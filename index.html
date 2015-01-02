@@ -33,7 +33,6 @@
         <nav class="navbar navbar-default navbar-slidein hidden-md hidden-lg" role="navigation" data-ng-class="{'navbar-slidein-active': mobileMenu}">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li><a data-ng-click="setHash('story')">Story</a></li>
                     <li><a data-ng-click="setHash('venues')">Venues</a></li>
                     <li><a data-ng-click="setHash('venues')">Wedding Party</a></li>
                     <li><a data-ng-click="setHash('venues')">Registry</a></li>
@@ -47,7 +46,6 @@
                     <a class="navbar-brand" data-ng-click="setHash('home')">Meaghan & Andy</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a data-ng-click="setHash('story')">Story</a></li>
                     <li><a data-ng-click="setHash('venues')">Venues</a></li>
                     <li><a data-ng-click="setHash('venues')">Wedding Party</a></li>
                     <li><a data-ng-click="setHash('venues')">Registry</a></li>
@@ -64,13 +62,30 @@
                 <div class="col-md-12"><h5>July 11, 2015</h5></div>
             </div>
 
-            <span class="scroll-down" data-ng-click="setHash('story')"></span>
-            <div id="story" class="row text-center page">
-                <div class="col-md-12"><h2>Story</h2></div>
-            </div>
-
+            <span class="scroll-down" data-ng-click="setHash('venues')"></span>
             <div id="venues" class="row text-center page">
-                <div class="col-md-12"><h2>Ceremony</h2></div>
+                <div class="venue-block col-md-4 col-sm-12 col-md-offset-2">
+                    <div class="venue-img ceremony-img">
+                        <div class="venue-info-button" data-ng-click="toggleDetails($event)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Details</div>
+                        <div class="venue-info-block">
+                            <h4>Saint Mary's of the Snow Church</h4>
+                            <p>Saugerties, NY</p>
+                            <a href="https://www.google.com/maps/dir//St.+Mary+of+the+Snow+School,+25+Cedar+Street,+Saugerties,+NY+12477/@42.077202,-73.946042,17z/data=!4m12!1m3!3m2!1s0x89dda6d7fc4c6f8b:0x537d156d66a2c638!2sSt.+Mary+of+the+Snow+School!4m7!1m0!1m5!1m1!1s0x89dda6d7fc4c6f8b:0x537d156d66a2c638!2m2!1d-73.946042!2d42.077202" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Directions</a>
+                        </div>
+                    </div>
+                    <div><h2>Ceremony</h2></div>
+                </div>
+                <div class="venue-block reception-block col-md-4 col-sm-12">
+                    <div class="venue-img reception-img">
+                        <div class="venue-info-button" data-ng-click="toggleDetails($event)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Details</div>
+                        <div class="venue-info-block">
+                            <h4>Diamond Mills Hotel and Tavern</h4>
+                            <p>Saugerties, NY</p>
+                            <a href="https://www.google.com/maps/dir//Diamond+Mills+Hotel,+25+South+Partition+Street,+Saugerties,+NY+12477/@42.073052,-73.950122,17z/data=!4m12!1m3!3m2!1s0x89dda7245adb9f95:0xa289163575ce8cd9!2sDiamond+Mills+Hotel!4m7!1m0!1m5!1m1!1s0x89dda7245adb9f95:0xa289163575ce8cd9!2m2!1d-73.950122!2d42.073052" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Directions</a>
+                        </div>
+                    </div>
+                    <div><h2>Reception</h2></div>
+                </div>
             </div>
         </div>
     </body>

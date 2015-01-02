@@ -25,4 +25,11 @@ app.controller('WeddingController', ['$location', '$document', '$scope', functio
             $location.hash(target);
         }
     };
+
+    $scope.toggleDetails = function($event) {
+        var element = angular.element(angular.element($event.currentTarget).parent().children()[1]),
+            showClass = 'venue-info-block-show';
+
+        (element.hasClass(showClass)) ? element.removeClass(showClass) : element.addClass(showClass);
+    }
 }]);
