@@ -70,146 +70,13 @@ div.navfix {
 }
 
 /* line 62, ../../scss/main.scss */
-.img-hands {
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
-  -moz-border-radius: 150px;
-  -webkit-border-radius: 150px;
-  border-radius: 150px;
-}
-@media (min-width: 992px) {
-  /* line 62, ../../scss/main.scss */
-  .img-hands {
-    width: 250px;
-    height: 250px;
-    -moz-border-radius: 250px;
-    -webkit-border-radius: 250px;
-    border-radius: 250px;
-  }
-}
-
-/* line 80, ../../scss/main.scss */
-div#home div.home {
-  border-top: none !important;
-  padding-bottom: 81px;
-}
-
-/* line 85, ../../scss/main.scss */
-#venues {
-  height: 1500px;
-}
-
-/* line 89, ../../scss/main.scss */
-#home div.home {
-  padding-top: 20px;
-}
-
-/* line 93, ../../scss/main.scss */
-.ceremony-img {
-  background-image: url("/static/media/saint_marys.png");
-}
-
-/* line 97, ../../scss/main.scss */
-.reception-img {
-  background-image: url("/static/media/diamond_mills.png");
-}
-
-/* line 101, ../../scss/main.scss */
-.venue-block {
-  margin-top: 40px;
-  text-align: center;
-  z-index: 1;
-}
-
-/* line 107, ../../scss/main.scss */
-.venue-info-block {
-  z-index: 2;
-  padding-top: 70px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background-color: rgba(50, 50, 50, 0.9);
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-@media (min-width: 992px) {
-  /* line 118, ../../scss/main.scss */
-  .venue-info-block:hover {
-    opacity: 100;
-  }
-}
-/* line 124, ../../scss/main.scss */
-.venue-info-block a {
-  color: #f1c40f;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-}
-/* line 130, ../../scss/main.scss */
-.venue-info-block a:visited {
-  color: #f1c40f;
-}
-/* line 134, ../../scss/main.scss */
-.venue-info-block a:hover {
-  color: #D3AC11;
-}
-
-/* line 140, ../../scss/main.scss */
-div.venue-info-block-show {
-  opacity: 100;
-}
-
-/* line 144, ../../scss/main.scss */
-.venue-info-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40px;
-  width: 90px;
-  line-height: 40px;
-  z-index: 3;
-  background-color: #323232;
-  cursor: pointer;
-  font-size: 15px;
-  display: inline-block;
-  -moz-border-radius-bottomright: 2px;
-  -webkit-border-bottom-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-@media (min-width: 992px) {
-  /* line 144, ../../scss/main.scss */
-  .venue-info-button {
-    display: none;
-  }
-}
-
-/* line 167, ../../scss/main.scss */
-.venue-img {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  max-width: 520px;
-  height: 235px;
-  position: relative;
-  color: white;
-}
-
-/* line 179, ../../scss/main.scss */
 div.page {
   padding-top: 40px;
   min-height: 100%;
   padding-bottom: 80px;
 }
 
-/* line 185, ../../scss/main.scss */
+/* line 68, ../../scss/main.scss */
 span.scroll-down {
   height: 0;
   margin-top: -10px;
@@ -225,7 +92,7 @@ span.scroll-down {
   text-align: center;
   display: block;
 }
-/* line 200, ../../scss/main.scss */
+/* line 83, ../../scss/main.scss */
 span.scroll-down:before {
   cursor: pointer;
   display: inline-block;
@@ -246,8 +113,159 @@ span.scroll-down:before {
   border-radius: 100px;
 }
 
+/* line 106, ../../scss/main.scss */
+.img-hands {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px;
+}
+@media (min-width: 992px) {
+  /* line 106, ../../scss/main.scss */
+  .img-hands {
+    width: 250px;
+    height: 250px;
+    -moz-border-radius: 250px;
+    -webkit-border-radius: 250px;
+    border-radius: 250px;
+  }
+}
+
+/* line 124, ../../scss/main.scss */
+div#home div.home {
+  border-top: none !important;
+  padding-bottom: 81px;
+}
+
+/* line 129, ../../scss/main.scss */
+#venues {
+  height: 1500px;
+}
+
+/* line 133, ../../scss/main.scss */
+#home div.home {
+  padding-top: 20px;
+}
+
+/* line 137, ../../scss/main.scss */
+.ceremony-img {
+  background-image: url("/static/media/saint_marys.png");
+}
+
+/* line 141, ../../scss/main.scss */
+.reception-img {
+  background-image: url("/static/media/diamond_mills.png");
+}
+
+/* line 145, ../../scss/main.scss */
+.venue-row {
+  text-align: center;
+}
+
+/* line 151, ../../scss/main.scss */
+.venue-block {
+  display: inline-block;
+  margin-top: 40px;
+  z-index: 1;
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+  height: 295px;
+}
+/* line 160, ../../scss/main.scss */
+.venue-block h2 {
+  margin: -5px 0 0 0;
+  height: 60px;
+  line-height: 60px;
+  background-color: #F5D76E;
+}
+
+/* line 169, ../../scss/main.scss */
+.venue-img {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 235px;
+}
+
+/* line 177, ../../scss/main.scss */
+.venue-info-block {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 80px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(50, 50, 50, 0.9);
+  color: white;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (min-width: 992px) {
+  /* line 193, ../../scss/main.scss */
+  .venue-info-block:hover {
+    opacity: 100;
+  }
+}
+/* line 199, ../../scss/main.scss */
+.venue-info-block a {
+  color: #f1c40f;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+/* line 205, ../../scss/main.scss */
+.venue-info-block a:visited {
+  color: #f1c40f;
+}
+/* line 209, ../../scss/main.scss */
+.venue-info-block a:hover {
+  color: #D3AC11;
+}
+
+/* line 215, ../../scss/main.scss */
+div.venue-info-block-show {
+  opacity: 100;
+}
+
+/* line 219, ../../scss/main.scss */
+.venue-info-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 90px;
+  line-height: 40px;
+  z-index: 3;
+  background-color: #323232;
+  cursor: pointer;
+  font-size: 15px;
+  display: inline-block;
+  color: white;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+@media (min-width: 992px) {
+  /* line 219, ../../scss/main.scss */
+  .venue-info-button {
+    display: none;
+  }
+}
+
 /* Bootstrap color changes */
-/* line 224, ../../scss/main.scss */
+/* line 245, ../../scss/main.scss */
 nav {
   background-color: #F5D76E !important;
 }

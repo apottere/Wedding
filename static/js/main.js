@@ -27,7 +27,7 @@ app.controller('WeddingController', ['$location', '$document', '$scope', functio
     };
 
     $scope.toggleDetails = function($event) {
-        var element = angular.element(angular.element($event.currentTarget).parent().children()[1]),
+        var element = angular.element(angular.element($event.currentTarget).parent().parent().children()[1]),
             showClass = 'venue-info-block-show';
 
         (element.hasClass(showClass)) ? element.removeClass(showClass) : element.addClass(showClass);
