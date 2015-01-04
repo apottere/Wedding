@@ -1,9 +1,4 @@
-/* line 10, ../../scss/main.scss */
-html {
-  min-height: 100%;
-}
-
-/* line 14, ../../scss/main.scss */
+/* line 16, ../../scss/main.scss */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,38 +6,37 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 21, ../../scss/main.scss */
+/* line 23, ../../scss/main.scss */
 body {
-  min-height: 100%;
   color: #777;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
 
-/* line 29, ../../scss/main.scss */
+/* line 30, ../../scss/main.scss */
 a {
   text-decoration: none;
   font-weight: 600;
   color: #337ab7;
 }
-/* line 34, ../../scss/main.scss */
+/* line 35, ../../scss/main.scss */
 a:visited a:focus {
   color: #337ab7;
   text-decoration: none;
 }
-/* line 39, ../../scss/main.scss */
+/* line 40, ../../scss/main.scss */
 a:hover {
   color: #23527c;
   text-decoration: none;
 }
 
-/* line 45, ../../scss/main.scss */
+/* line 46, ../../scss/main.scss */
 nav.navbar {
   z-index: 100;
   border-bottom: none;
 }
-/* line 49, ../../scss/main.scss */
+/* line 50, ../../scss/main.scss */
 nav.navbar a {
   cursor: pointer;
   -moz-user-select: -moz-none;
@@ -51,7 +45,7 @@ nav.navbar a {
   user-select: none;
 }
 
-/* line 55, ../../scss/main.scss */
+/* line 56, ../../scss/main.scss */
 nav.navbar-slidein {
   position: fixed;
   top: 36px;
@@ -72,7 +66,7 @@ nav.navbar-slidein {
   border-radius: 0px;
 }
 
-/* line 69, ../../scss/main.scss */
+/* line 70, ../../scss/main.scss */
 nav.navbar-slidein-active {
   -moz-transform: translate(0px, 1em);
   -ms-transform: translate(0px, 1em);
@@ -80,17 +74,17 @@ nav.navbar-slidein-active {
   transform: translate(0px, 1em);
 }
 
-/* line 73, ../../scss/main.scss */
-div.navfix {
-  padding-top: 50px;
-  height: 100%;
-}
-
-/* line 78, ../../scss/main.scss */
+/* line 74, ../../scss/main.scss */
 div.page {
   padding-top: 40px;
-  min-height: 100%;
-  padding-bottom: 80px;
+  height: 100vh;
+  max-height: 1000px;
+}
+@media (min-width: 992px) {
+  /* line 74, ../../scss/main.scss */
+  div.page {
+    max-height: 2000px;
+  }
 }
 
 /* line 84, ../../scss/main.scss */
@@ -105,7 +99,7 @@ span.scroll-down {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  border-top: 10px solid #F5D76E;
+  border-top: 10px solid #FCCF65;
   text-align: center;
   display: block;
 }
@@ -123,8 +117,8 @@ span.scroll-down:before {
   top: -35px;
   color: #777;
   width: 61px;
-  background-color: #F5D76E;
-  border: 10px solid #F5D76E;
+  background-color: #FCCF65;
+  border: 10px solid #FCCF65;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
@@ -159,7 +153,7 @@ div#home div.home {
 
 /* line 150, ../../scss/main.scss */
 #venues {
-  background-color: #95A5A6;
+  background-color: #B7BDC4;
 }
 @media (min-width: 992px) {
   /* line 150, ../../scss/main.scss */
@@ -169,41 +163,34 @@ div#home div.home {
   }
 }
 
-@media (min-width: 992px) {
-  /* line 161, ../../scss/main.scss */
-  #registry {
-    height: 600px;
-  }
-}
-
-/* line 167, ../../scss/main.scss */
+/* line 161, ../../scss/main.scss */
 #footer {
-  background-color: #F5D76E;
+  background-color: #FCCF65;
   height: 100px;
   line-height: 100px;
   width: 100%;
   text-align: center;
 }
 @media (min-width: 992px) {
-  /* line 167, ../../scss/main.scss */
+  /* line 161, ../../scss/main.scss */
   #footer {
     height: 150px;
     line-height: 150px;
   }
 }
-/* line 179, ../../scss/main.scss */
+/* line 173, ../../scss/main.scss */
 #footer p {
   margin: 0;
 }
 
-/* line 184, ../../scss/main.scss */
+/* line 178, ../../scss/main.scss */
 .venue-header {
   color: white;
   font-size: 55px;
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  /* line 184, ../../scss/main.scss */
+  /* line 178, ../../scss/main.scss */
   .venue-header {
     height: 100px;
     line-height: 100px;
@@ -212,22 +199,22 @@ div#home div.home {
   }
 }
 
-/* line 199, ../../scss/main.scss */
+/* line 193, ../../scss/main.scss */
 .ceremony-img {
   background-image: url("/static/media/saint_marys.png");
 }
 
-/* line 203, ../../scss/main.scss */
+/* line 197, ../../scss/main.scss */
 .reception-img {
   background-image: url("/static/media/diamond_mills.png");
 }
 
-/* line 207, ../../scss/main.scss */
+/* line 201, ../../scss/main.scss */
 .venue-row {
   text-align: center;
 }
 
-/* line 211, ../../scss/main.scss */
+/* line 205, ../../scss/main.scss */
 .venue-block {
   display: inline-block;
   margin-top: 40px;
@@ -237,21 +224,21 @@ div#home div.home {
   width: 100%;
   height: 295px;
 }
-/* line 220, ../../scss/main.scss */
+/* line 214, ../../scss/main.scss */
 .venue-block h2 {
   margin: -5px 0 0 0;
   height: 60px;
   line-height: 60px;
-  background-color: #F5D76E;
+  background-color: #FCCF65;
 }
 @media (min-width: 992px) {
-  /* line 211, ../../scss/main.scss */
+  /* line 205, ../../scss/main.scss */
   .venue-block {
     margin-top: 0px;
   }
 }
 
-/* line 233, ../../scss/main.scss */
+/* line 227, ../../scss/main.scss */
 .venue-img {
   display: inline-block;
   background-repeat: no-repeat;
@@ -260,7 +247,7 @@ div#home div.home {
   height: 235px;
 }
 
-/* line 241, ../../scss/main.scss */
+/* line 235, ../../scss/main.scss */
 .venue-info-block {
   z-index: 2;
   position: absolute;
@@ -278,32 +265,66 @@ div#home div.home {
   transition: 0.3s;
 }
 @media (min-width: 992px) {
-  /* line 257, ../../scss/main.scss */
+  /* line 251, ../../scss/main.scss */
   .venue-info-block:hover {
     opacity: 100;
   }
+  /* line 255, ../../scss/main.scss */
+  .venue-info-block:hover h4, .venue-info-block:hover a {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
-/* line 263, ../../scss/main.scss */
+/* line 262, ../../scss/main.scss */
 .venue-info-block a {
   color: #f1c40f;
   font-size: 15px;
   font-weight: 600;
+  -moz-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  -moz-transform: translate(0, -1em);
+  -ms-transform: translate(0, -1em);
+  -webkit-transform: translate(0, -1em);
+  transform: translate(0, -1em);
 }
-/* line 268, ../../scss/main.scss */
+/* line 270, ../../scss/main.scss */
 .venue-info-block a:visited .venue-info-block a:focus {
   color: #f1c40f;
 }
-/* line 272, ../../scss/main.scss */
+/* line 274, ../../scss/main.scss */
 .venue-info-block a:hover {
-  color: #D3AC11;
+  color: #ad8611;
+}
+/* line 279, ../../scss/main.scss */
+.venue-info-block h4 {
+  font-weight: 600;
+  -moz-transform: translate(0, 1em);
+  -ms-transform: translate(0, 1em);
+  -webkit-transform: translate(0, 1em);
+  transform: translate(0, 1em);
+  -moz-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
 }
 
-/* line 278, ../../scss/main.scss */
+/* line 287, ../../scss/main.scss */
 div.venue-info-block-show {
   opacity: 100;
 }
+/* line 290, ../../scss/main.scss */
+div.venue-info-block-show h4, div.venue-info-block-show a {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
 
-/* line 282, ../../scss/main.scss */
+/* line 295, ../../scss/main.scss */
 .venue-info-button {
   position: absolute;
   top: 0;
@@ -326,28 +347,28 @@ div.venue-info-block-show {
   user-select: none;
 }
 @media (min-width: 992px) {
-  /* line 282, ../../scss/main.scss */
+  /* line 295, ../../scss/main.scss */
   .venue-info-button {
     display: none;
   }
 }
 
-/* line 307, ../../scss/main.scss */
+/* line 324, ../../scss/main.scss */
 .registry-row {
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #F5D76E;
+  background-color: #FCCF65;
 }
 
-/* line 313, ../../scss/main.scss */
+/* line 330, ../../scss/main.scss */
 .registry-block {
   display: inline-block;
-  background-color: #F5D76E;
+  background-color: #FCCF65;
   height: 70px;
   margin: auto;
   padding-left: 10px;
 }
-/* line 320, ../../scss/main.scss */
+/* line 337, ../../scss/main.scss */
 .registry-block img {
   height: 50px;
   width: 50px;
@@ -357,7 +378,7 @@ div.venue-info-block-show {
   -webkit-border-radius: 100px;
   border-radius: 100px;
 }
-/* line 329, ../../scss/main.scss */
+/* line 346, ../../scss/main.scss */
 .registry-block p {
   height: 70px;
   line-height: 70px;
@@ -369,7 +390,7 @@ div.venue-info-block-show {
 }
 
 /* Bootstrap color changes */
-/* line 342, ../../scss/main.scss */
+/* line 359, ../../scss/main.scss */
 nav {
-  background-color: #F5D76E !important;
+  background-color: #FCCF65 !important;
 }

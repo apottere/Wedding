@@ -5,11 +5,13 @@ $size-md: 992px;
 $size-sm: 768px;
 $size-xs: 480px;
 
-$yellow: #F5D76E;
-
-html {
-  min-height: 100%;
-}
+//$yellow: #F5D76E;
+$yellow: #FCCF65;
+$gray: #B7BDC4;
+$salmon: #FF765E;
+$pink: #FFE5C6;
+$beige: #C2AE8B;
+$text: #777;
 
 html, body {
   margin: 0;
@@ -19,10 +21,9 @@ html, body {
 }
 
 body {
-  min-height: 100%;
-  color:#777;
+  color: $text;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size:14px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -70,15 +71,14 @@ nav.navbar-slidein-active {
   @include translate(0px);
 }
 
-div.navfix {
-  padding-top: 50px;
-  height: 100%;
-}
-
 div.page {
   padding-top: 40px;
-  min-height: 100%;
-  padding-bottom: 80px;
+  height: 100vh;
+  max-height: 1000px;
+
+  @media (min-width: $size-md) {
+    max-height: 2000px;
+  }
 }
 
 span.scroll-down {
@@ -148,19 +148,13 @@ $venue-label-height: 60px;
 $venue-header-height: 100px;
 $venue-header-margin: 70px;
 #venues {
-  background-color: #95A5A6;
+  background-color: $gray;
 
 
   $venue-padding: 250px;
   @media (min-width: $size-md) {
     padding-top: $venue-padding - $venue-header-height;
     padding-bottom: $venue-padding;
-  }
-}
-
-#registry {
-  @media (min-width: $size-md) {
-    height: 600px;
   }
 }
 
@@ -257,6 +251,11 @@ $venue-header-margin: 70px;
   &:hover {
     @media (min-width: $size-md) {
       opacity: 100;
+
+      h4, a {
+        @include translate(0 ,0);
+      }
+
     }
   }
 
@@ -265,18 +264,32 @@ $venue-header-margin: 70px;
     font-size: 15px;
     font-weight: 600;
 
+    @include transition(.3s ease-in-out);
+    @include translate(0, -1em);
+
     &:visited &:focus {
       color: $link-color;
     }
 
     &:hover {
-      color: #D3AC11;
+      color: #ad8611;
     }
+  }
+
+  h4 {
+    font-weight: 600;
+
+    @include translate(0, 1em);
+    @include transition(.3s ease-in-out);
   }
 }
 
 div.venue-info-block-show {
   opacity: 100;
+
+  h4, a {
+    @include translate(0 ,0);
+  }
 }
 
 .venue-info-button {
@@ -302,6 +315,10 @@ div.venue-info-block-show {
   @media (min-width: $size-md) {
     display: none;
   }
+}
+
+#registry {
+  //background-color: $pink;
 }
 
 .registry-row {
