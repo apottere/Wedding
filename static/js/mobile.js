@@ -2,7 +2,7 @@ $(function() {
 	if(jQuery.browser.mobile) {
 		var resize = function() {
 			$('.page').css({
-				'height': $(window).height()
+				'min-height': $(window).height()
 			});
 		};
 
