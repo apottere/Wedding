@@ -78,9 +78,13 @@ nav.navbar-slidein-active {
 div.page {
   padding-top: 40px;
   min-height: 100vh;
+  -moz-transition: min-height 0.2s;
+  -o-transition: min-height 0.2s;
+  -webkit-transition: min-height 0.2s;
+  transition: min-height 0.2s;
 }
 
-/* line 79, ../../scss/main.scss */
+/* line 80, ../../scss/main.scss */
 span.scroll-down {
   height: 0;
   margin-top: -10px;
@@ -96,7 +100,7 @@ span.scroll-down {
   text-align: center;
   display: block;
 }
-/* line 94, ../../scss/main.scss */
+/* line 95, ../../scss/main.scss */
 span.scroll-down:before {
   cursor: pointer;
   display: inline-block;
@@ -117,7 +121,7 @@ span.scroll-down:before {
   border-radius: 100px;
 }
 
-/* line 117, ../../scss/main.scss */
+/* line 118, ../../scss/main.scss */
 .img-hands {
   margin-top: 50px;
   width: 150px;
@@ -127,7 +131,7 @@ span.scroll-down:before {
   border-radius: 150px;
 }
 @media (min-width: 992px) {
-  /* line 117, ../../scss/main.scss */
+  /* line 118, ../../scss/main.scss */
   .img-hands {
     width: 250px;
     height: 250px;
@@ -138,26 +142,26 @@ span.scroll-down:before {
   }
 }
 
-/* line 137, ../../scss/main.scss */
+/* line 138, ../../scss/main.scss */
 div#home div.home {
   border-top: none !important;
   padding-bottom: 81px;
   padding-top: 20px;
 }
 
-/* line 147, ../../scss/main.scss */
+/* line 148, ../../scss/main.scss */
 #venues {
   background-color: #C2AE8B;
 }
 @media (min-width: 992px) {
-  /* line 147, ../../scss/main.scss */
+  /* line 148, ../../scss/main.scss */
   #venues {
     padding-top: 150px;
     padding-bottom: 250px;
   }
 }
 
-/* line 158, ../../scss/main.scss */
+/* line 159, ../../scss/main.scss */
 #footer {
   background-color: #FCCF65;
   height: 100px;
@@ -166,25 +170,25 @@ div#home div.home {
   text-align: center;
 }
 @media (min-width: 992px) {
-  /* line 158, ../../scss/main.scss */
+  /* line 159, ../../scss/main.scss */
   #footer {
     height: 150px;
     line-height: 150px;
   }
 }
-/* line 170, ../../scss/main.scss */
+/* line 171, ../../scss/main.scss */
 #footer p {
   margin: 0;
 }
 
-/* line 175, ../../scss/main.scss */
+/* line 176, ../../scss/main.scss */
 .venue-header {
   color: white;
   font-size: 55px;
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  /* line 175, ../../scss/main.scss */
+  /* line 176, ../../scss/main.scss */
   .venue-header {
     height: 100px;
     line-height: 100px;
@@ -193,22 +197,22 @@ div#home div.home {
   }
 }
 
-/* line 190, ../../scss/main.scss */
+/* line 191, ../../scss/main.scss */
 .ceremony-img {
   background-image: url("/static/media/saint_marys.png");
 }
 
-/* line 194, ../../scss/main.scss */
+/* line 195, ../../scss/main.scss */
 .reception-img {
   background-image: url("/static/media/diamond_mills.png");
 }
 
-/* line 198, ../../scss/main.scss */
+/* line 199, ../../scss/main.scss */
 .venue-row {
   text-align: center;
 }
 
-/* line 202, ../../scss/main.scss */
+/* line 203, ../../scss/main.scss */
 .venue-block {
   display: inline-block;
   margin-top: 40px;
@@ -218,7 +222,7 @@ div#home div.home {
   width: 100%;
   height: 295px;
 }
-/* line 211, ../../scss/main.scss */
+/* line 212, ../../scss/main.scss */
 .venue-block h2 {
   margin: -5px 0 0 0;
   height: 60px;
@@ -226,13 +230,13 @@ div#home div.home {
   background-color: #FCCF65;
 }
 @media (min-width: 992px) {
-  /* line 202, ../../scss/main.scss */
+  /* line 203, ../../scss/main.scss */
   .venue-block {
     margin-top: 0px;
   }
 }
 
-/* line 224, ../../scss/main.scss */
+/* line 225, ../../scss/main.scss */
 .venue-img {
   display: inline-block;
   background-repeat: no-repeat;
@@ -241,7 +245,7 @@ div#home div.home {
   height: 235px;
 }
 
-/* line 232, ../../scss/main.scss */
+/* line 233, ../../scss/main.scss */
 .venue-info-block {
   z-index: 2;
   position: absolute;
@@ -259,11 +263,11 @@ div#home div.home {
   transition: 0.3s;
 }
 @media (min-width: 992px) {
-  /* line 248, ../../scss/main.scss */
+  /* line 249, ../../scss/main.scss */
   .venue-info-block:hover {
     opacity: 100;
   }
-  /* line 252, ../../scss/main.scss */
+  /* line 253, ../../scss/main.scss */
   .venue-info-block:hover h4, .venue-info-block:hover a {
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
@@ -271,7 +275,7 @@ div#home div.home {
     transform: translate(0, 0);
   }
 }
-/* line 259, ../../scss/main.scss */
+/* line 260, ../../scss/main.scss */
 .venue-info-block a {
   color: #f1c40f;
   font-size: 15px;
@@ -285,15 +289,15 @@ div#home div.home {
   -webkit-transform: translate(0, -1em);
   transform: translate(0, -1em);
 }
-/* line 267, ../../scss/main.scss */
+/* line 268, ../../scss/main.scss */
 .venue-info-block a:visited .venue-info-block a:focus {
   color: #f1c40f;
 }
-/* line 271, ../../scss/main.scss */
+/* line 272, ../../scss/main.scss */
 .venue-info-block a:hover {
   color: #ad8611;
 }
-/* line 276, ../../scss/main.scss */
+/* line 277, ../../scss/main.scss */
 .venue-info-block h4 {
   font-weight: 600;
   -moz-transform: translate(0, 1em);
@@ -306,11 +310,11 @@ div#home div.home {
   transition: ease-in-out 0.3s;
 }
 
-/* line 284, ../../scss/main.scss */
+/* line 285, ../../scss/main.scss */
 div.venue-info-block-show {
   opacity: 100;
 }
-/* line 287, ../../scss/main.scss */
+/* line 288, ../../scss/main.scss */
 div.venue-info-block-show h4, div.venue-info-block-show a {
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -318,7 +322,7 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
   transform: translate(0, 0);
 }
 
-/* line 292, ../../scss/main.scss */
+/* line 293, ../../scss/main.scss */
 .venue-info-button {
   position: absolute;
   top: 0;
@@ -341,20 +345,20 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
   user-select: none;
 }
 @media (min-width: 992px) {
-  /* line 292, ../../scss/main.scss */
+  /* line 293, ../../scss/main.scss */
   .venue-info-button {
     display: none;
   }
 }
 
-/* line 321, ../../scss/main.scss */
+/* line 322, ../../scss/main.scss */
 .registry-row {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #FCCF65;
 }
 
-/* line 327, ../../scss/main.scss */
+/* line 328, ../../scss/main.scss */
 .registry-block {
   display: inline-block;
   background-color: #FCCF65;
@@ -362,7 +366,7 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
   margin: auto;
   padding-left: 10px;
 }
-/* line 334, ../../scss/main.scss */
+/* line 335, ../../scss/main.scss */
 .registry-block img {
   height: 50px;
   width: 50px;
@@ -372,7 +376,7 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
   -webkit-border-radius: 100px;
   border-radius: 100px;
 }
-/* line 343, ../../scss/main.scss */
+/* line 344, ../../scss/main.scss */
 .registry-block p {
   height: 70px;
   line-height: 70px;
@@ -384,7 +388,7 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
 }
 
 /* Bootstrap color changes */
-/* line 356, ../../scss/main.scss */
+/* line 357, ../../scss/main.scss */
 nav {
   background-color: #FCCF65 !important;
 }
