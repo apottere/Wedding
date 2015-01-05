@@ -4,6 +4,10 @@ app.config(['$locationProvider', function($locationProvider) {
     $locationProvider.html5Mode({enabled: true, requireBase: false}).hashPrefix('!');
 }]);
 
+app.run(function() {
+	FastClick.attach(document.body);
+})
+
 app.controller('WeddingController', ['$location', '$document', '$scope', function($location, $document, $scope) {
     $scope.mobileMenu = false;
 
