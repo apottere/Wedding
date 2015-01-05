@@ -77,6 +77,7 @@ nav.navbar-slidein-active {
 /* line 74, ../../scss/main.scss */
 div.page {
   padding-top: 40px;
+  padding-bottom: 15px;
   min-height: 100vh;
   -moz-transition: min-height 0.2s;
   -o-transition: min-height 0.2s;
@@ -84,7 +85,7 @@ div.page {
   transition: min-height 0.2s;
 }
 
-/* line 80, ../../scss/main.scss */
+/* line 81, ../../scss/main.scss */
 span.scroll-down {
   height: 0;
   margin-top: -10px;
@@ -100,7 +101,7 @@ span.scroll-down {
   text-align: center;
   display: block;
 }
-/* line 95, ../../scss/main.scss */
+/* line 96, ../../scss/main.scss */
 span.scroll-down:before {
   cursor: pointer;
   display: inline-block;
@@ -121,7 +122,7 @@ span.scroll-down:before {
   border-radius: 100px;
 }
 
-/* line 118, ../../scss/main.scss */
+/* line 119, ../../scss/main.scss */
 .img-hands {
   margin-top: 50px;
   width: 150px;
@@ -131,7 +132,7 @@ span.scroll-down:before {
   border-radius: 150px;
 }
 @media (min-width: 992px) {
-  /* line 118, ../../scss/main.scss */
+  /* line 119, ../../scss/main.scss */
   .img-hands {
     width: 250px;
     height: 250px;
@@ -142,10 +143,9 @@ span.scroll-down:before {
   }
 }
 
-/* line 138, ../../scss/main.scss */
+/* line 139, ../../scss/main.scss */
 div#home div.home {
   border-top: none !important;
-  padding-bottom: 81px;
   padding-top: 20px;
 }
 

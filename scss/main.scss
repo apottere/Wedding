@@ -73,6 +73,7 @@ nav.navbar-slidein-active {
 
 div.page {
   padding-top: 40px;
+  padding-bottom: 15px;
   min-height: 100vh;
   @include transition(min-height .2s);
 }
@@ -137,7 +138,6 @@ span.scroll-down {
 
 div#home div.home {
   border-top: none !important;
-  padding-bottom: 81px;
   padding-top: 20px;
 }
 
