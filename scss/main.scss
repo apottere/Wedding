@@ -72,7 +72,7 @@ nav.navbar-slidein-active {
 }
 
 div.page {
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 15px;
   min-height: 100vh;
   @include transition(min-height .2s);
@@ -134,11 +134,6 @@ span.scroll-down {
 
     @include border-radius($hands-large);
   }
-}
-
-div#home div.home {
-  border-top: none !important;
-  padding-top: 20px;
 }
 
 $venue-img-height: 235px;
