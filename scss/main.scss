@@ -133,6 +133,8 @@ span.scroll-down {
     width: $hands-large;
     height: $hands-large;
 
+    margin-top: 200px;
+
     @include border-radius($hands-large);
   }
 }

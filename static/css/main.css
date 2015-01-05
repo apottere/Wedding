@@ -138,32 +138,33 @@ span.scroll-down:before {
   .img-hands {
     width: 250px;
     height: 250px;
+    margin-top: 200px;
     -moz-border-radius: 250px;
     -webkit-border-radius: 250px;
     border-radius: 250px;
   }
 }
 
-/* line 140, ../../scss/main.scss */
+/* line 142, ../../scss/main.scss */
 div#home div.home {
   border-top: none !important;
   padding-bottom: 81px;
   padding-top: 20px;
 }
 
-/* line 150, ../../scss/main.scss */
+/* line 152, ../../scss/main.scss */
 #venues {
   background-color: #C2AE8B;
 }
 @media (min-width: 992px) {
-  /* line 150, ../../scss/main.scss */
+  /* line 152, ../../scss/main.scss */
   #venues {
     padding-top: 150px;
     padding-bottom: 250px;
   }
 }
 
-/* line 161, ../../scss/main.scss */
+/* line 163, ../../scss/main.scss */
 #footer {
   background-color: #FCCF65;
   height: 100px;
@@ -172,25 +173,25 @@ div#home div.home {
   text-align: center;
 }
 @media (min-width: 992px) {
-  /* line 161, ../../scss/main.scss */
+  /* line 163, ../../scss/main.scss */
   #footer {
     height: 150px;
     line-height: 150px;
   }
 }
-/* line 173, ../../scss/main.scss */
+/* line 175, ../../scss/main.scss */
 #footer p {
   margin: 0;
 }
 
-/* line 178, ../../scss/main.scss */
+/* line 180, ../../scss/main.scss */
 .venue-header {
   color: white;
   font-size: 55px;
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  /* line 178, ../../scss/main.scss */
+  /* line 180, ../../scss/main.scss */
   .venue-header {
     height: 100px;
     line-height: 100px;
@@ -199,22 +200,22 @@ div#home div.home {
   }
 }
 
-/* line 193, ../../scss/main.scss */
+/* line 195, ../../scss/main.scss */
 .ceremony-img {
   background-image: url("/static/media/saint_marys.png");
 }
 
-/* line 197, ../../scss/main.scss */
+/* line 199, ../../scss/main.scss */
 .reception-img {
   background-image: url("/static/media/diamond_mills.png");
 }
 
-/* line 201, ../../scss/main.scss */
+/* line 203, ../../scss/main.scss */
 .venue-row {
   text-align: center;
 }
 
-/* line 205, ../../scss/main.scss */
+/* line 207, ../../scss/main.scss */
 .venue-block {
   display: inline-block;
   margin-top: 40px;
@@ -224,7 +225,7 @@ div#home div.home {
   width: 100%;
   height: 295px;
 }
-/* line 214, ../../scss/main.scss */
+/* line 216, ../../scss/main.scss */
 .venue-block h2 {
   margin: -5px 0 0 0;
   height: 60px;
@@ -232,13 +233,13 @@ div#home div.home {
   background-color: #FCCF65;
 }
 @media (min-width: 992px) {
-  /* line 205, ../../scss/main.scss */
+  /* line 207, ../../scss/main.scss */
   .venue-block {
     margin-top: 0px;
   }
 }
 
-/* line 227, ../../scss/main.scss */
+/* line 229, ../../scss/main.scss */
 .venue-img {
   display: inline-block;
   background-repeat: no-repeat;
@@ -247,7 +248,7 @@ div#home div.home {
   height: 235px;
 }
 
-/* line 235, ../../scss/main.scss */
+/* line 237, ../../scss/main.scss */
 .venue-info-block {
   z-index: 2;
   position: absolute;
@@ -265,11 +266,11 @@ div#home div.home {
   transition: 0.3s;
 }
 @media (min-width: 992px) {
-  /* line 251, ../../scss/main.scss */
+  /* line 253, ../../scss/main.scss */
   .venue-info-block:hover {
     opacity: 100;
   }
-  /* line 255, ../../scss/main.scss */
+  /* line 257, ../../scss/main.scss */
   .venue-info-block:hover h4, .venue-info-block:hover a {
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
@@ -277,7 +278,7 @@ div#home div.home {
     transform: translate(0, 0);
   }
 }
-/* line 262, ../../scss/main.scss */
+/* line 264, ../../scss/main.scss */
 .venue-info-block a {
   color: #f1c40f;
   font-size: 15px;
@@ -291,15 +292,15 @@ div#home div.home {
   -webkit-transform: translate(0, -1em);
   transform: translate(0, -1em);
 }
-/* line 270, ../../scss/main.scss */
+/* line 272, ../../scss/main.scss */
 .venue-info-block a:visited .venue-info-block a:focus {
   color: #f1c40f;
 }
-/* line 274, ../../scss/main.scss */
+/* line 276, ../../scss/main.scss */
 .venue-info-block a:hover {
   color: #ad8611;
 }
-/* line 279, ../../scss/main.scss */
+/* line 281, ../../scss/main.scss */
 .venue-info-block h4 {
   font-weight: 600;
   -moz-transform: translate(0, 1em);
@@ -312,11 +313,11 @@ div#home div.home {
   transition: ease-in-out 0.3s;
 }
 
-/* line 287, ../../scss/main.scss */
+/* line 289, ../../scss/main.scss */
 div.venue-info-block-show {
   opacity: 100;
 }
-/* line 290, ../../scss/main.scss */
+/* line 292, ../../scss/main.scss */
 div.venue-info-block-show h4, div.venue-info-block-show a {
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -324,7 +325,7 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
   transform: translate(0, 0);
 }
 
-/* line 295, ../../scss/main.scss */
+/* line 297, ../../scss/main.scss */
 .venue-info-button {
   position: absolute;
   top: 0;
@@ -347,20 +348,20 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
   user-select: none;
 }
 @media (min-width: 992px) {
-  /* line 295, ../../scss/main.scss */
+  /* line 297, ../../scss/main.scss */
   .venue-info-button {
     display: none;
   }
 }
 
-/* line 324, ../../scss/main.scss */
+/* line 326, ../../scss/main.scss */
 .registry-row {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #FCCF65;
 }
 
-/* line 330, ../../scss/main.scss */
+/* line 332, ../../scss/main.scss */
 .registry-block {
   display: inline-block;
   background-color: #FCCF65;
@@ -368,7 +369,7 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
   margin: auto;
   padding-left: 10px;
 }
-/* line 337, ../../scss/main.scss */
+/* line 339, ../../scss/main.scss */
 .registry-block img {
   height: 50px;
   width: 50px;
@@ -378,7 +379,7 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
   -webkit-border-radius: 100px;
   border-radius: 100px;
 }
-/* line 346, ../../scss/main.scss */
+/* line 348, ../../scss/main.scss */
 .registry-block p {
   height: 70px;
   line-height: 70px;
@@ -390,7 +391,7 @@ div.venue-info-block-show h4, div.venue-info-block-show a {
 }
 
 /* Bootstrap color changes */
-/* line 359, ../../scss/main.scss */
+/* line 361, ../../scss/main.scss */
 nav {
   background-color: #FCCF65 !important;
 }
