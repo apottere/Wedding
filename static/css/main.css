@@ -153,7 +153,7 @@ div#home div.home {
 
 /* line 150, ../../scss/main.scss */
 #venues {
-  background-color: #B7BDC4;
+  background-color: #C2AE8B;
 }
 @media (min-width: 992px) {
   /* line 150, ../../scss/main.scss */
@@ -194,7 +194,7 @@ div#home div.home {
   .venue-header {
     height: 100px;
     line-height: 100px;
-    margin-bottom: 70px;
+    margin-bottom: 150px;
     font-size: 75px;
   }
 }
