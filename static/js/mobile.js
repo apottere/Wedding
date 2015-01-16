@@ -1,7 +1,7 @@
 $(function() {
-	if(jQuery.browser.mobile) {
+	if($.browser.mobile) {
 		var resize = function() {
-			$('.page').css({
+			$('.fullpage').css({
 				'min-height': $(window).height()
 			});
 		};

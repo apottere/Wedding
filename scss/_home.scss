@@ -1,0 +1,76 @@
+@import "compass/css3.scss";
+@import "_sizes.scss";
+@import "_colors.scss";
+
+span.scroll-down {
+  height: 0;
+  margin-top: -10px;
+  margin-left: -20px;
+  margin-right: -20px;
+  width: auto;
+
+  overflow: visible;
+  @include user-select(none);
+
+  border-top: 10px solid $yellow;
+
+  text-align: center;
+  display: block;
+
+  &:before {
+    $height: 70px;
+
+    cursor: pointer;
+    display: inline-block;
+    height: $height - 10;
+    content: "\e114";
+    font-family: 'Glyphicons Halflings';
+    box-sizing: border-box;
+    line-height: 40px;
+    font-size: 17px;
+
+    position: relative;
+    top: -($height / 2);
+
+    color: #777;
+    width: 61px;
+    background-color: $yellow;
+    border: 10px solid $yellow;
+    @include border-radius(100px);
+  }
+}
+
+.img-hands {
+  $hands-large: 250px;
+  $hands-small: 150px;
+
+  margin-top: 50px;
+  width: $hands-small;
+  height: $hands-small;
+
+  @include border-radius($hands-small);
+
+  @media (min-width: $size-md) {
+    width: $hands-large;
+    height: $hands-large;
+
+    margin-top: 200px;
+
+    @include border-radius($hands-large);
+  }
+}
+
+span.names {
+  width: 100%;
+  display: inline-block;
+
+  @media (min-width: $size-md) {
+    display: inline;
+    width: auto;
+  }
+}
+
+span.name-and {
+  font-size: 22px;
+  margin: 0 5px;
+}

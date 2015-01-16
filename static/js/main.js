@@ -6,7 +6,7 @@ app.config(['$locationProvider', function($locationProvider) {
 
 app.run(function() {
 	FastClick.attach(document.body);
-})
+});
 
 app.controller('WeddingController', ['$location', '$document', '$scope', function($location, $document, $scope) {
     $scope.mobileMenu = false;

@@ -1,0 +1,40 @@
+@import "compass/css3.scss";
+@import "_sizes.scss";
+@import "_colors.scss";
+
+#registry {
+}
+
+.registry-row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $yellow;
+}
+
+.registry-block {
+  display: inline-block;
+  background-color: $yellow;
+  height: 70px;
+  margin: auto;
+  padding-left: 10px;
+
+  img {
+    height: 50px;
+    width: 50px;
+    margin: 10px 0 10px 0;
+    float: left;
+
+    @include border-radius(100px);
+  }
+
+  p {
+    height: 70px;
+    line-height: 70px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    float: left;
+
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
