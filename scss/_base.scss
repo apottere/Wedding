@@ -3,75 +3,75 @@
 @import "_colors.scss";
 
 html, body {
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
-  color: $text;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+    color: $text;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #337ab7;
-
-  &:visited &:focus {
+    text-decoration: none;
+    font-weight: 600;
     color: #337ab7;
-    text-decoration: none;
-  }
 
-  &:hover {
-    color: #23527c;
-    text-decoration: none;
-  }
+    &:visited &:focus {
+        color: #337ab7;
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: #23527c;
+        text-decoration: none;
+    }
 }
 
 div.page {
-  padding-top: 50px;
-  padding-bottom: 15px;
-  @include transition(min-height .2s);
+    padding-top: 50px;
+    padding-bottom: 15px;
+    @include transition(min-height .2s);
 
-  @media (min-width: $size-md) {
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
+    @media (min-width: $size-md) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
 }
 
 div.fullpage {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 #footer {
-  background-color: $yellow;
-  height: 100px;
-  line-height: 100px;
-  width: 100%;
-  text-align: center;
+    background-color: $yellow;
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    text-align: center;
 
-  @media (min-width: $size-md) {
-    height: 150px;
-    line-height: 150px;
-  }
+    @media (min-width: $size-md) {
+        height: 150px;
+        line-height: 150px;
+    }
 
-  p {
-    margin: 0;
-  }
+    p {
+        margin: 0;
+    }
 }
 
 .section-header {
-  font-size: 45px;
-  font-weight: 700;
+    font-size: 45px;
+    font-weight: 700;
 
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 
-  @media (min-width: $size-md) {
-    font-size: 75px;
-    margin-bottom: 70px;
-  }
+    @media (min-width: $size-md) {
+        font-size: 75px;
+        margin-bottom: 70px;
+    }
 }

@@ -5,138 +5,138 @@
 $venue-img-height: 235px;
 $venue-label-height: 60px;
 #venues {
-  background-color: $beige;
+    background-color: $beige;
 }
 
 .venue-header {
-  color: white;
-  margin-bottom: 100px;
+    color: white;
+    margin-bottom: 100px;
 }
 
 .ceremony-img {
-  background-image: url("/static/media/saint_marys.png");
+    background-image: url("/static/media/saint_marys.png");
 }
 
 .reception-img {
-  background-image: url("/static/media/diamond_mills.png");
+    background-image: url("/static/media/diamond_mills.png");
 }
 
 .venue-row {
-  text-align: center;
+    text-align: center;
 }
 
 .venue-block {
-  display: inline-block;
-  margin-top: 40px;
-  z-index: 1;
-  position: relative;
-  max-width: 520px;
-  width: 100%;
-  height: $venue-img-height + $venue-label-height;
+    display: inline-block;
+    margin-top: 40px;
+    z-index: 1;
+    position: relative;
+    max-width: 520px;
+    width: 100%;
+    height: $venue-img-height + $venue-label-height;
 
-  h2 {
-    margin: -5px 0 0 0;
-    height: $venue-label-height;
-    line-height: $venue-label-height;
+    h2 {
+        margin: -5px 0 0 0;
+        height: $venue-label-height;
+        line-height: $venue-label-height;
 
-    background-color: $yellow;
-  }
+        background-color: $yellow;
+    }
 
-  @media (min-width: $size-md) {
-    margin-top: 0;
-  }
+    @media (min-width: $size-md) {
+        margin-top: 0;
+    }
 }
 
 .venue-img {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: $venue-img-height;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: $venue-img-height;
 }
 
 .venue-info-block {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 80px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background-color: rgba(50, 50, 50, 0.9);
-  color: white;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(50, 50, 50, 0.9);
+    color: white;
 
-  $link-color: #f1c40f;
+    $link-color: #f1c40f;
 
-  @include transition(.3s);
-
-  &:hover {
-    @media (min-width: $size-md) {
-      opacity: 100;
-
-      h4, a {
-        @include translate(0 ,0);
-      }
-
-    }
-  }
-
-  a {
-    color: $link-color;
-    font-size: 15px;
-    font-weight: 600;
-
-    @include transition(.3s ease-in-out);
-    @include translate(0, -1em);
-
-    &:visited &:focus {
-      color: $link-color;
-    }
+    @include transition(.3s);
 
     &:hover {
-      color: #ad8611;
+        @media (min-width: $size-md) {
+            opacity: 100;
+
+            h4, a {
+                @include translate(0, 0);
+            }
+
+        }
     }
-  }
 
-  h4 {
-    font-weight: 600;
+    a {
+        color: $link-color;
+        font-size: 15px;
+        font-weight: 600;
 
-    @include translate(0, 1em);
-    @include transition(.3s ease-in-out);
-  }
+        @include transition(.3s ease-in-out);
+        @include translate(0, -1em);
+
+        &:visited &:focus {
+            color: $link-color;
+        }
+
+        &:hover {
+            color: #ad8611;
+        }
+    }
+
+    h4 {
+        font-weight: 600;
+
+        @include translate(0, 1em);
+        @include transition(.3s ease-in-out);
+    }
 }
 
 div.venue-info-block-show {
-  opacity: 100;
+    opacity: 100;
 
-  h4, a {
-    @include translate(0 ,0);
-  }
+    h4, a {
+        @include translate(0, 0);
+    }
 }
 
 .venue-info-button {
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  height: 40px;
-  width: 90px;
-  line-height: 40px;
-  z-index: 3;
-  background-color: rgb(50, 50, 50);
-  cursor: pointer;
+    height: 40px;
+    width: 90px;
+    line-height: 40px;
+    z-index: 3;
+    background-color: rgb(50, 50, 50);
+    cursor: pointer;
 
-  font-size: 15px;
-  display: inline-block;
+    font-size: 15px;
+    display: inline-block;
 
-  color: white;
+    color: white;
 
-  @include border-bottom-right-radius(2px);
-  @include user-select(none);
+    @include border-bottom-right-radius(2px);
+    @include user-select(none);
 
-  @media (min-width: $size-md) {
-    display: none;
-  }
+    @media (min-width: $size-md) {
+        display: none;
+    }
 }
 

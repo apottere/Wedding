@@ -3,22 +3,22 @@
 @import "_colors.scss";
 
 #welcome {
-  background-color: $pink;
+    background-color: $pink;
 }
 
 div.welcome {
-  margin-top: 50px;
-  margin-bottom: 75px;
+    margin-top: 50px;
+    margin-bottom: 75px;
 
-  .welcome-header {
-    font-size: 28px;
+    .welcome-header {
+        font-size: 28px;
 
-    @media (min-width: $size-md) {
-      font-size: 45px;
+        @media (min-width: $size-md) {
+            font-size: 45px;
+        }
     }
-  }
 
-  .welcome-sub {
-    font-size: 20px;
-  }
+    .welcome-sub {
+        font-size: 20px;
+    }
 }

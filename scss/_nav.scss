@@ -3,34 +3,34 @@
 @import "_colors.scss";
 
 nav.navbar {
-  z-index: 100;
-  border-bottom: none;
+    z-index: 100;
+    border-bottom: none;
 
-  a {
-    cursor: pointer;
-    @include user-select(none);
-  }
+    a {
+        cursor: pointer;
+        @include user-select(none);
+    }
 }
 
 nav.navbar-slidein {
-  position: fixed;
-  top: 36px;
-  width: 150px;
-  min-height: 100%;
-  z-index: 100;
+    position: fixed;
+    top: 36px;
+    width: 150px;
+    min-height: 100%;
+    z-index: 100;
 
-  border: none;
+    border: none;
 
-  @include translate(-220px);
-  @include transition(.2s);
-  @include border-radius(0);
+    @include translate(-220px);
+    @include transition(.2s);
+    @include border-radius(0);
 }
 
 nav.navbar-slidein-active {
-  @include translate(0);
+    @include translate(0);
 }
 
 /* Bootstrap color changes */
 nav {
-  background-color: $yellow !important;
+    background-color: $yellow !important;
 }
