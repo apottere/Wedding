@@ -4,32 +4,13 @@
 
 $venue-img-height: 235px;
 $venue-label-height: 60px;
-$venue-header-height: 100px;
-$venue-header-margin: 150px;
 #venues {
   background-color: $beige;
-
-
-  $venue-padding: 250px;
-  @media (min-width: $size-md) {
-    padding-top: $venue-padding - $venue-header-height;
-    padding-bottom: $venue-padding;
-  }
 }
 
 .venue-header {
   color: white;
-
-  font-size: 55px;
-  font-weight: 700;
-
-  @media (min-width: $size-md) {
-    height: $venue-header-height;
-    line-height: $venue-header-height;
-    margin-bottom: $venue-header-margin;
-
-    font-size: 75px;
-  }
+  margin-bottom: 100px;
 }
 
 .ceremony-img {

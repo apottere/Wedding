@@ -36,6 +36,11 @@ div.page {
   padding-top: 50px;
   padding-bottom: 15px;
   @include transition(min-height .2s);
+
+  @media (min-width: $size-md) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
 }
 
 div.fullpage {
@@ -59,3 +64,14 @@ div.fullpage {
   }
 }
 
+.section-header {
+  font-size: 45px;
+  font-weight: 700;
+
+  margin-bottom: 50px;
+
+  @media (min-width: $size-md) {
+    font-size: 75px;
+    margin-bottom: 70px;
+  }
+}

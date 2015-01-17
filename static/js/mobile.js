@@ -7,6 +7,5 @@ $(function() {
 		};
 
 		resize();
-		$(window).resize(resize);
 	}
 });

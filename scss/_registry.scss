@@ -5,36 +5,112 @@
 #registry {
 }
 
+.registry-header {
+  margin-bottom: 50px;
+}
+
+.registry-row-container {
+  margin-top: 50px;
+}
+
+$registry-row-height: 70px;
 .registry-row {
   margin-top: 10px;
-  margin-bottom: 10px;
   background-color: $yellow;
+  padding: 0;
+  display: block;
+  height: $registry-row-height;
+  line-height: $registry-row-height;
 }
 
 .registry-block {
   display: inline-block;
   background-color: $yellow;
-  height: 70px;
-  margin: auto;
-  padding-left: 10px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: $text;
 
-  img {
-    height: 50px;
-    width: 50px;
-    margin: 10px 0 10px 0;
+  .img-holder {
+    height: 100%;
+    width: $registry-row-height;
+    display: inline-block;
+    background-color: $beige;
+
+    vertical-align: middle;
     float: left;
 
-    @include border-radius(100px);
+    img {
+      height: 50px;
+      width: 50px;
+      margin: 10px;
+    }
   }
 
   p {
-    height: 70px;
-    line-height: 70px;
-    margin-left: 10px;
+    height: $registry-row-height;
+    line-height: $registry-row-height;
     margin-bottom: 0;
-    float: left;
+  }
 
-    font-size: 20px;
+  p.name {
+    vertical-align: middle;
+    display: inline-block;
+
+    font-size: 24px;
     font-weight: 600;
+
+    float: left;
+    margin-left: 20px;
+    @media (min-width: $size-md) {
+      float: none;
+      margin-left: 0;
+    }
+  }
+
+  p.description {
+    vertical-align: middle;
+    margin-left: 20px;
+    font-size: 16px;
+
+    display: none;
+    @media (min-width: $size-md) {
+      display: inline-block;
+    }
+  }
+
+  div.glyph-container {
+    height: $registry-row-height;
+    width: $registry-row-height;
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+
+    i {
+      height: 100%;
+      line-height: $registry-row-height;
+      width: 100%;
+      background-color: #777;
+      color: $yellow;
+      font-size: 22px;
+      margin-top: -1px;
+
+      @include transition(.3s ease-out);
+      @include translate3d($registry-row-height, 0);
+    }
+  }
+}
+
+.registry-block {
+  &:hover {
+    div.glyph-container {
+      i {
+        @media (min-width: $size-md) {
+          @include translate3d(0, 0);
+        }
+      }
+    }
   }
 }

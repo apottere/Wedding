@@ -37,6 +37,7 @@
         <nav class="navbar navbar-default navbar-slidein hidden-md hidden-lg" role="navigation" data-ng-class="{'navbar-slidein-active': mobileMenu}">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
+                    <li><a data-ng-click="setHash('welcome')">Welcome</a></li>
                     <li><a data-ng-click="setHash('venues')">Venues</a></li>
                     <li><a data-ng-click="setHash('registry')">Registry</a></li>
                 </ul>
@@ -49,6 +50,7 @@
                     <a class="navbar-brand" data-ng-click="setHash('home')">Meaghan & Andy</a>
                 </div>
                 <ul class="nav navbar-nav">
+                    <li><a data-ng-click="setHash('welcome')">Welcome</a></li>
                     <li><a data-ng-click="setHash('venues')">Venues</a></li>
                     <li><a data-ng-click="setHash('registry')">Registry</a></li>
                 </ul>
@@ -64,9 +66,15 @@
                 <div class="col-md-12"><h5>July 11, 2015</h5></div>
             </div>
 
-            <span class="scroll-down" data-ng-click="setHash('venues')"></span>
+            <span class="scroll-down" data-ng-click="setHash('welcome')"></span>
+            <div id="welcome" class="row text-center page">
+                <div class="col-md-8 col-md-offset-2 welcome">
+                    <p class="section-header welcome-header">Thanks for stopping by!</p>
+                    <p class="welcome-sub">We can't wait to celebrate with you on our big day!  You should be able to find answers to all your wedding related questions here.  If you can't, feel free to reach out to us at any time.</p>
+                </div>
+            </div>
             <div id="venues" class="row text-center page">
-                <h1 class="venue-header">Venues</h1>
+                <h1 class="section-header venue-header">Venues</h1>
                 <div class="venue-row col-md-4 col-sm-12 col-md-offset-2">
                     <div class="venue-block">
                         <div class="venue-img ceremony-img">
@@ -98,26 +106,30 @@
             </div>
 
             <div id="registry" class="row text-center page">
-                <!--
-                    <div class="registry-row col-md-4 col-sm-12 text-center">
+                <h1 class="section-header registry-header">Registries</h1>
+                <div class="col-md-8 col-md-offset-2">
+                    <h4>We're registered a few different places.  Feel free to browse!</h4>
+                </div>
+
+                <div class="registry-row-container">
+                    <a class="registry-row col-md-8 col-md-offset-2 col-sm-12 text-center" href="http://www1.macys.com/registry/wedding/guest/?registryId=6301462" target="_blank">
                         <div class="registry-block clearfix">
-                            <img src="/static/media/macys.png" />
-                            <p>Macy's</p>
+                            <div class="img-holder"><img src="/static/media/macys.png" /></div>
+                            <p class="name">Macy's</p>
+                            <p class="description">Dinnerware and cutlery</p>
+                            <div class="glyph-container"><i class="glyphicon glyphicon-link"></i></div>
                         </div>
-                    </div>
-                    <div class="registry-row col-md-4 col-sm-12">
+                    </a>
+
+                    <a class="registry-row col-md-8 col-md-offset-2 col-sm-12 text-center" href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?eventType=Wedding&registryId=541822753" target="_blank">
                         <div class="registry-block clearfix">
-                            <img src="/static/media/macys.png" />
-                            <p>Macy's</p>
+                            <div class="img-holder"><img src="/static/media/bbb.png" /></div>
+                            <p class="name">Bed, Bath, and Beyond</p>
+                            <p class="description">Coockware and Home</p>
+                            <div class="glyph-container"><i class="glyphicon glyphicon-link"></i></div>
                         </div>
-                    </div>
-                    <div class="registry-row col-md-4 col-sm-12">
-                        <div class="registry-block clearfix">
-                            <img src="/static/media/macys.png" />
-                            <p>Macy's</p>
-                        </div>
-                    </div>
-                -->
+                    </a>
+                </div>
             </div>
         </div>
         <div id="footer">
