@@ -58,7 +58,7 @@ $registry-row-height: 70px;
         vertical-align: middle;
         display: inline-block;
 
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 600;
 
         float: left;
@@ -66,6 +66,7 @@ $registry-row-height: 70px;
         @media (min-width: $size-md) {
             float: none;
             margin-left: 0;
+            font-size: 24px;
         }
     }
 
