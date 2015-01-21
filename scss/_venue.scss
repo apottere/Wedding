@@ -10,7 +10,10 @@ $venue-label-height: 60px;
 
 .venue-header {
     color: white;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+    @media (min-width: $size-md) {
+        margin-bottom: 100px;
+    }
 }
 
 .ceremony-img {
