@@ -78,8 +78,6 @@ div.accommodation {
         font-size: 20px;
         margin-bottom: 15px;
 
-        @include transition(.2s);
-
         span {
             font-size: 14px;
         }

@@ -11,8 +11,15 @@ $venue-label-height: 60px;
 .venue-header {
     color: white;
     margin-bottom: 40px;
+}
+
+.venue-sub {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 40px;
+
     @media (min-width: $size-md) {
-        margin-bottom: 100px;
+        font-size: 20px;
     }
 }
 
