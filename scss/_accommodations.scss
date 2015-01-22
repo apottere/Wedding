@@ -3,6 +3,13 @@
 
 #accommodations {
     background-color: $pink;
+
+    a.other {
+        font-size: 22px;
+        margin-top: 30px;
+        display: inline-block;
+        font-weight: 500;
+    }
 }
 
 .accommodations-header {
@@ -14,12 +21,21 @@
 }
 
 div.accommodation {
-    padding: 50px 0 30px 0;
+    padding: 50px 20px 20px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
     @include transition(0.3s);
     &:hover {
-        background-color: rgba(255, 255, 255, 0.5)
+        background-color: rgba(255, 255, 255, 0.5);
+
+        @media (min-width: $size-md) {
+            .name {
+                span {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
     @media (min-width: $size-md) {
@@ -35,37 +51,34 @@ div.accommodation {
     }
 
     .name {
-        display: inline-block;
         width: 100%;
-        height: 30px;
-        line-height: 30px;
-        font-size: 25px;
-        font-weight: 600;
+        a {
+            display: inline-block;
+            position: relative;
+            height: 30px;
+            line-height: 30px;
+            font-size: 25px;
+            font-weight: 300;
 
-        margin-bottom: 10px;
-        color: $text;
-
-        @media (min-width: $size-md) {
-            font-size: 30px;
-        }
-
-        span {
+            margin-bottom: 10px;
             color: $text;
-            font-size: 16px;
 
             @media (min-width: $size-md) {
-                opacity: 0;
-                cursor: default;
-
-                @include transition(0.2s);
+                font-size: 30px;
             }
-        }
 
-        @media (min-width: $size-md) {
-            &:hover {
-                span {
-                    opacity: 1;
-                    cursor: pointer;
+            span {
+                color: $text;
+                font-size: 16px;
+                position: absolute;
+                right: -20px;
+                top: 10px;
+
+                @media (min-width: $size-md) {
+                    opacity: 0;
+                    cursor: default;
+
+                    @include transition(0.2s);
                 }
             }
         }
@@ -77,6 +90,7 @@ div.accommodation {
         line-height: 20px;
         font-size: 20px;
         margin-bottom: 15px;
+        font-weight: 400;
 
         span {
             font-size: 14px;
@@ -85,7 +99,7 @@ div.accommodation {
 
     p.note {
         color: $salmon;
-        height: 20px;
+        min-height: 40px;
         line-height: 20px;
         font-size: 18px;
     }
