@@ -1,0 +1,40 @@
+@import "compass/css3.scss";
+@import "_sizes.scss";
+@import "_colors.scss";
+
+#rsvp {
+    background-color: $pink;
+}
+
+div.rsvp {
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    .rsvp-header {
+        font-size: 26px;
+
+        @media (min-width: $size-md) {
+            font-size: 45px;
+        }
+    }
+
+    .rsvp-sub {
+        font-size: 20px;
+    }
+}
+
+.delete-child, .add-child {
+    line-height: 34px;
+}
+
+.child-list-item {
+    margin-bottom: 5px;
+}
+
+i.send-rsvp {
+    font-size: 11px;
+}
+
+.rsvp-divider {
+    border-top-color: $beige;
+}

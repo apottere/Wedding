@@ -11,6 +11,61 @@ app.run(function() {
 app.controller('WeddingController', ['$location', '$document', '$scope', function($location, $document, $scope) {
     $scope.mobileMenu = false;
 
+    $scope.rsvp = {
+        attending: null,
+        childrenUnder4: [],
+        children4AndOlder: [],
+        food: {
+            beef: null,
+            fish: null,
+            veggie: null
+        }
+    };
+
+    $scope.childrenAreValid = function() {
+        if(!$scope.rsvp.childrenUnder4.length && !$scope.rsvp.children4AndOlder.length) {
+            return false;
+        }
+
+        var checkChildren = function (child) {
+            return !!child.name;
+        };
+
+        return _.every($scope.rsvp.childrenUnder4, checkChildren) && _.every($scope.rsvp.children4AndOlder, checkChildren);
+    };
+
+    $scope.addedChildren = function() {
+        return $scope.rsvp.children ? $scope.childrenAreValid() : true;
+    };
+
+    $scope.chosenFood = function () {
+        return $scope.rsvp.food.beef || $scope.rsvp.food.fish || $scope.rsvp.food.veggie;
+    };
+
+    $scope.readyToSubmit = function() {
+        if($scope.rsvp.attending === null || !$scope.rsvp.name) {
+            return false;
+        }
+
+        if(!$scope.isAttending()) {
+            return true;
+        }
+
+        return $scope.addedChildren() && $scope.chosenFood();
+    };
+
+    $scope.addChild = function(list) {
+        list.push({name: ''});
+    };
+
+    $scope.removeChild = function(list, index) {
+        list.splice(index, 1);
+    };
+
+    $scope.isAttending = function () {
+        return 'attending' in $scope.rsvp && $scope.rsvp.attending == 'yes';
+    };
+
     $scope.menuClick = function() {
         $scope.mobileMenu = !$scope.mobileMenu;
     };
