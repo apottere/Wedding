@@ -93,14 +93,14 @@
                 <form class="form-horizontal col-md-6 col-md-offset-3 text-left">
 
                     <div class="form-group">
-                        <label for="rsvp-name" class="control-label col-md-4">Name(s)</label>
-                        <div class="col-md-8">
+                        <label for="rsvp-name" class="control-label col-md-3">Name(s)</label>
+                        <div class="col-md-9">
                             <input id="rsvp-name" type="text" placeholder="Mr. Jake and Mrs. Tabitha O'Reilly" class="form-control" data-ng-model="rsvp.name">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-offset-4 col-md-8">
+                        <div class="col-md-offset-3 col-md-9">
                             <div class="radio-inline">
                                 <label>
                                     <input type="radio" name="rsvp-radios" id="rsvp-radio-yes" value="yes" data-ng-model="rsvp.attending">
@@ -122,36 +122,36 @@
                     </div>
 
                     <div class="form-group" data-ng-show="rsvp.children && isAttending()">
-                        <label class="control-label col-md-4">Children under 4 years</label>
+                        <label class="control-label col-md-3">Under 4 years</label>
 
                         <div data-ng-repeat="child in rsvp.childrenUnder4">
-                            <div class="col-md-7 child-list-item" data-ng-class="{'col-md-offset-4': $index !== 0}">
+                            <div class="col-md-8 child-list-item" data-ng-class="{'col-md-offset-3': $index !== 0}">
                                 <input type="text" placeholder="Name" class="form-control" data-ng-model="child.name">
                             </div>
                             <div class="col-md-1 text-left">
-                                <a href="javascript:void(0);" data-ng-click="removeChild(rsvp.childrenUnder4, $index)"><i class="glyphicon glyphicon-minus text-danger delete-child"></i></a>
+                                <a href="javascript:void(0);" data-ng-click="removeChild(rsvp.childrenUnder4, $index)"><i class="glyphicon glyphicon-trash text-danger delete-child"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-md-1" data-ng-class="{'col-md-offset-11': rsvp.childrenUnder4.length, 'col-md-offset-7': !rsvp.childrenUnder4.length}">
-                            <a href="javascript:void(0);" data-ng-click="addChild(rsvp.childrenUnder4)"><i class="glyphicon glyphicon-plus text-success add-child"></i></a>
+                        <div class="col-md-9" data-ng-class="{'col-md-offset-3': rsvp.childrenUnder4.length}">
+                            <a href="javascript:void(0);" data-ng-click="addChild(rsvp.childrenUnder4)"><i class="glyphicon glyphicon-plus text-success add-child"></i><span class="text-success"> Add</span></a>
                         </div>
                     </div>
 
                     <div class="form-group" data-ng-show="rsvp.children && isAttending()">
-                        <label class="control-label col-md-4">Children 4-12</label>
+                        <label class="control-label col-md-3">4 to 12</label>
 
                         <div data-ng-repeat="child in rsvp.children4AndOlder">
-                            <div class="col-md-7 child-list-item" data-ng-class="{'col-md-offset-4': $index !== 0}">
+                            <div class="col-md-8 child-list-item" data-ng-class="{'col-md-offset-3': $index !== 0}">
                                 <input type="text" placeholder="Name" class="form-control" data-ng-model="child.name">
                             </div>
                             <div class="col-md-1 text-left">
-                                <a href="javascript:void(0);" data-ng-click="removeChild(rsvp.children4AndOlder, $index)"><i class="glyphicon glyphicon-minus text-danger delete-child"></i></a>
+                                <a href="javascript:void(0);" data-ng-click="removeChild(rsvp.children4AndOlder, $index)"><i class="glyphicon glyphicon-trash text-danger delete-child"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-md-1" data-ng-class="{'col-md-offset-11': rsvp.children4AndOlder.length, 'col-md-offset-7': !rsvp.children4AndOlder.length}">
-                            <a href="javascript:void(0);" data-ng-click="addChild(rsvp.children4AndOlder)"><i class="glyphicon glyphicon-plus text-success add-child"></i></a>
+                        <div class="col-md-9" data-ng-class="{'col-md-offset-3': rsvp.children4AndOlder.length}">
+                            <a href="javascript:void(0);" data-ng-click="addChild(rsvp.children4AndOlder)"><i class="glyphicon glyphicon-plus text-success add-child"></i><span class="text-success"> Add</span></a>
                         </div>
                     </div>
 
@@ -159,32 +159,32 @@
                         <hr class="divider rsvp-divider col-md-offset-2">
 
                         <div class="form-group">
-                            <label for="rsvp-beef" class="control-label col-md-4">Beef</label>
+                            <label for="rsvp-beef" class="control-label col-md-3">Beef</label>
                             <div class="col-md-2">
                                 <input id="rsvp-beef" type="number" min="0" placeholder="#" class="form-control" data-ng-model="rsvp.food.beef">
                             </div>
-                            <span class="col-md-6">Roasted rib eye of beef with braised daube of beef, roasted fingerling potatoes, and grilled zucchini</span>
+                            <span class="col-md-7">Roasted rib eye of beef with braised daube of beef, roasted fingerling potatoes, and grilled zucchini</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="rsvp-fish" class="control-label col-md-4">Fish</label>
+                            <label for="rsvp-fish" class="control-label col-md-3">Fish</label>
                             <div class="col-md-2">
                                 <input id="rsvp-fish" type="number" min="0" placeholder="#" class="form-control" data-ng-model="rsvp.food.fish">
                             </div>
-                            <span class="col-md-6">Grilled salmon with tomato confit, haricot vert, goat cheese gnocchi, and parsley sauce</span>
+                            <span class="col-md-7">Grilled salmon with tomato confit, haricot vert, goat cheese gnocchi, and parsley sauce</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="rsvp-veggie" class="control-label col-md-4">Vegetarian</label>
+                            <label for="rsvp-veggie" class="control-label col-md-3">Vegetarian</label>
                             <div class="col-md-2">
                                 <input id="rsvp-veggie" type="number" min="0" placeholder="#" class="form-control" data-ng-model="rsvp.food.veggie">
                             </div>
-                            <span class="col-md-6">Gnocchi with root vegetables, spinach, and shiitake mushrooms in brown butter sage sauce with ricotta salata</span>
+                            <span class="col-md-7">Gnocchi with root vegetables, spinach, and shiitake mushrooms in brown butter sage sauce with ricotta salata</span>
                         </div>
                     </div>
 
                     <div class="form-group" data-ng-show="readyToSubmit()">
-                        <div class="col-md-8 col-md-offset-4">
+                        <div class="col-md-9 col-md-offset-3">
                             <button type="submit" class="btn btn-primary">Send RSVP <i class="glyphicon glyphicon-envelope send-rsvp"></i></button>
                         </div>
                     </div>
