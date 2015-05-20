@@ -90,7 +90,7 @@
                     <p class="section-header rsvp-header">RSVP</p>
                 </div>
 
-                <form class="form-horizontal col-md-6 col-md-offset-3 text-left">
+                <form class="form-horizontal col-md-6 col-md-offset-3 text-left" data-ng-submit="submitRsvp()" data-ng-show="!rsvpSubmitted">
 
                     <div class="form-group">
                         <label for="rsvp-name" class="control-label col-md-3">Name(s)</label>
@@ -237,7 +237,6 @@
                         <div class="registry-block clearfix">
                             <div class="img-holder"><img src="/static/media/macys.png" /></div>
                             <p class="name">Macy's</p>
-                            <p class="description">Dinnerware and Cutlery</p>
                             <div class="glyph-container"><i class="glyphicon glyphicon-link"></i></div>
                         </div>
                     </a>
@@ -246,7 +245,6 @@
                         <div class="registry-block clearfix">
                             <div class="img-holder"><img src="/static/media/bbb.png" /></div>
                             <p class="name">Bed, Bath, and Beyond</p>
-                            <p class="description">Coockware and Home</p>
                             <div class="glyph-container"><i class="glyphicon glyphicon-link"></i></div>
                         </div>
                     </a>
