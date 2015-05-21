@@ -8,11 +8,12 @@
         <link rel="shortcut icon" href="static/media/favicon.ico" type="image/x-icon">
         <link rel="icon" href="static/media/favicon.ico" type="image/x-icon">
 
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/static/css/main.css" />
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Open+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
 
+        <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
         <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="//detectmobilebrowsers.com/download/jquery"></script>
@@ -50,7 +51,7 @@
         <nav class="navbar navbar-default navbar-slidein hidden-md hidden-lg" role="navigation" data-ng-class="{'navbar-slidein-active': mobileMenu}">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li><a data-ng-click="setHash('welcome')">Welcome</a></li>
+                    <li><a data-ng-click="setHash('rsvp')">RSVP</a></li>
                     <li><a data-ng-click="setHash('venues')">Venues</a></li>
                     <li><a data-ng-click="setHash('registry')">Registries</a></li>
                     <li><a data-ng-click="setHash('accommodations')">Accommodations</a></li>
@@ -64,7 +65,7 @@
                     <a class="navbar-brand" data-ng-click="setHash('home')">Meaghan & Andy</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a data-ng-click="setHash('welcome')">Welcome</a></li>
+                    <li><a data-ng-click="setHash('rsvp')">RSVP</a></li>
                     <li><a data-ng-click="setHash('venues')">Venues</a></li>
                     <li><a data-ng-click="setHash('registry')">Registries</a></li>
                     <li><a data-ng-click="setHash('accommodations')">Accommodations</a></li>
@@ -82,13 +83,109 @@
                 <img class="flowers" src="static/media/flowers.svg" />
             </div>
 
-            <span class="scroll-down" data-ng-click="setHash('welcome')"></span>
-            <div id="welcome" class="row text-center page">
-                <div class="col-md-8 col-md-offset-2 welcome">
-                    <p class="section-header welcome-header">Thanks for stopping by!</p>
-                    <p class="welcome-sub">We're looking forward to celebrating with you on our big day!</p>
+            <span class="scroll-down" data-ng-click="setHash('rsvp')"></span>
+
+            <div id="rsvp" class="row text-center page">
+                <div class="col-md-8 col-md-offset-2 rsvp">
+                    <p class="section-header rsvp-header">RSVP</p>
+                </div>
+
+                <form class="form-horizontal col-md-6 col-md-offset-3 text-left" data-ng-submit="submitRsvp()" data-ng-if="showRsvpForm()">
+
+                    <div class="form-group">
+                        <label for="rsvp-name" class="control-label col-md-3">Name(s)</label>
+                        <div class="col-md-9">
+                            <input id="rsvp-name" type="text" placeholder="Mr. Jake and Mrs. Tabitha O'Reilly" class="form-control" data-ng-model="rsvp.name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-3 col-md-9">
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="rsvp-radios" id="rsvp-radio-yes" value="yes" data-ng-model="rsvp.attending">
+                                    Attending
+                                </label>
+                            </div>
+                            <div class="radio-inline">
+                                <label>
+                                    <input type="radio" name="rsvp-radios" id="rsvp-radio-no" value="no" data-ng-model="rsvp.attending">
+                                    Regretfully Decline
+                                </label>
+                            </div>
+                            <div class="checkbox" data-ng-show="isAttending()">
+                                <label>
+                                    <input type="checkbox" data-ng-model="rsvp.children"> <strong>With Children (12yo and under)</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" data-ng-show="rsvp.children && isAttending()">
+                        <label class="control-label col-md-3">Under 4 years</label>
+
+                        <div data-ng-repeat="child in rsvp.childrenUnder4">
+                            <div class="col-xs-10 col-md-8 child-list-item" data-ng-class="{'col-md-offset-3': $index !== 0}">
+                                <input type="text" placeholder="Name" class="form-control" data-ng-model="child.name">
+                            </div>
+                            <div class="col-xs-2 col-md-1 text-left">
+                                <a href="javascript:void(0);" data-ng-click="removeChild(rsvp.childrenUnder4, $index)"><i class="glyphicon glyphicon-trash text-danger delete-child"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-9" data-ng-class="{'col-md-offset-3': rsvp.childrenUnder4.length}">
+                            <a href="javascript:void(0);" data-ng-click="addChild(rsvp.childrenUnder4)"><i class="glyphicon glyphicon-plus text-success add-child"></i><span class="text-success"> Add</span></a>
+                        </div>
+                    </div>
+
+                    <div class="form-group" data-ng-show="rsvp.children && isAttending()">
+                        <label class="control-label col-md-3">4 to 12</label>
+
+                        <div data-ng-repeat="child in rsvp.children4AndOlder">
+                            <div class="col-xs-10 col-md-8 child-list-item" data-ng-class="{'col-md-offset-3': $index !== 0}">
+                                <input type="text" placeholder="Name" class="form-control" data-ng-model="child.name">
+                            </div>
+                            <div class="col-xs-2 col-md-1 text-left">
+                                <a href="javascript:void(0);" data-ng-click="removeChild(rsvp.children4AndOlder, $index)"><i class="glyphicon glyphicon-trash text-danger delete-child"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-9" data-ng-class="{'col-md-offset-3': rsvp.children4AndOlder.length}">
+                            <a href="javascript:void(0);" data-ng-click="addChild(rsvp.children4AndOlder)"><i class="glyphicon glyphicon-plus text-success add-child"></i><span class="text-success"> Add</span></a>
+                        </div>
+                    </div>
+
+                    <hr class="divider rsvp-divider col-md-offset-2" data-ng-show="readyToSubmit()">
+
+                    <div class="form-group" data-ng-show="readyToSubmit()">
+                        <div class="col-md-9 col-md-offset-3">
+                            <button type="submit" class="btn btn-primary">Send RSVP <i class="glyphicon glyphicon-envelope send-rsvp"></i></button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="col-md-12 text-center submitting" data-ng-if="submittingRsvp">
+                    <div class="spinner"></div>
+                    <span>Sending...</span>
+                </div>
+
+                <div class="col-md-12 text-center submitted" data-ng-if="rsvpSubmitted && !rsvpError">
+                    <div><h2><i class="glyphicon glyphicon-ok text-success"></i> Thanks for your response!</h2></div>
+                    <div>
+                        <span data-ng-if="isAttending()">We look forward to seeing you!</span>
+                        <span data-ng-if="!isAttending()">We're sorry you can't make it.</span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center submitted error" data-ng-if="rsvpSubmitted && rsvpError">
+                    <div><h2><i class="glyphicon glyphicon-exclamation-sign text-danger"></i> Something went wrong...</h2></div>
+                    <div>
+                        <span>You can either try again later or email your information to <span class="text-info" data-ng-bind="getEmail()"></span></span>
+                    </div>
                 </div>
             </div>
+
             <div id="venues" class="row text-center page">
                 <h1 class="section-header venue-header">Venues</h1>
                 <div class="row"><div class="col-md-12"><p class="venue-sub">Looking for something to do between the ceremony and reception?  Our beautiful hometown is filled with fun and interesting activities!<br /><a href="http://discoversaugerties.com/" target="_blank">This</a> is a great place to start gathering ideas.</p></div></div>
@@ -106,6 +203,7 @@
                         <h2>Ceremony</h2>
                     </div>
                 </div>
+
                 <div class="venue-row col-md-4 col-sm-12">
                     <div class="venue-block">
                         <div class="venue-img reception-img">
