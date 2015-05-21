@@ -50,8 +50,8 @@ app.controller('WeddingController', ['$location', '$document', '$scope', '$http'
             })
         }).success(function() {
             $scope.rsvpError = false;
-        }).error(function() {
-            $scope.rsvpError = true;
+        }).error(function(data, status, headers, config) {
+            $scope.rsvpError = status !== 0;
         }).finally(function() {
             $scope.submittingRsvp = false;
             $scope.rsvpSubmitted = true;
