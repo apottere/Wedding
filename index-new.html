@@ -142,15 +142,15 @@
                         <label class="control-label col-md-3">4 to 12</label>
 
                         <div data-ng-repeat="child in rsvp.children4AndOlder">
-                            <div class="col-md-8 child-list-item" data-ng-class="{'col-md-offset-3': $index !== 0}">
+                            <div class="col-xs-10 col-md-8 child-list-item" data-ng-class="{'col-md-offset-3': $index !== 0}">
                                 <input type="text" placeholder="Name" class="form-control" data-ng-model="child.name">
                             </div>
-                            <div class="col-md-1 text-left">
+                            <div class="col-xs-2 col-md-1 text-left">
                                 <a href="javascript:void(0);" data-ng-click="removeChild(rsvp.children4AndOlder, $index)"><i class="glyphicon glyphicon-trash text-danger delete-child"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-md-9" data-ng-class="{'col-md-offset-3': rsvp.children4AndOlder.length}">
+                        <div class="col-xs-12 col-md-9" data-ng-class="{'col-md-offset-3': rsvp.children4AndOlder.length}">
                             <a href="javascript:void(0);" data-ng-click="addChild(rsvp.children4AndOlder)"><i class="glyphicon glyphicon-plus text-success add-child"></i><span class="text-success"> Add</span></a>
                         </div>
                     </div>
