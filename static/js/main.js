@@ -27,9 +27,13 @@ app.controller('WeddingController', ['$location', '$document', '$scope', '$http'
     $scope.rsvpError = null;
 
     var getChildrenJoined = function(children) {
-        return _.map(children, function(o) {
-            return o.name;
-        }).join(', ');
+        if($scope.rsvp.children && children && children.length) {
+            return _.map(children, function(o) {
+                return o.name;
+            }).join(', ');
+        } else {
+            return '';
+        }
     };
 
     $scope.submitRsvp = function() {
@@ -45,8 +49,8 @@ app.controller('WeddingController', ['$location', '$document', '$scope', '$http'
             data: $.param({
                 'entry.236789417': $scope.rsvp.name,
                 'entry.812866607': $scope.rsvp.attending,
-                'entry.1026480432': $scope.rsvp.childrenUnder4.length ? getChildrenJoined($scope.rsvp.childrenUnder4) : '',
-                'entry.1667147661': $scope.rsvp.children4AndOlder.length ? getChildrenJoined($scope.rsvp.children4AndOlder) : ''
+                'entry.1026480432': getChildrenJoined($scope.rsvp.childrenUnder4),
+                'entry.1667147661': getChildrenJoined($scope.rsvp.children4AndOlder)
             })
         }).success(function() {
             $scope.rsvpError = false;
