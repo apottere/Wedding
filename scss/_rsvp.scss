@@ -42,3 +42,34 @@ i.send-rsvp {
 .rsvp-divider {
     border-top-color: $beige;
 }
+
+.submitted {
+    font-size: 20px;
+    font-weight: 300;
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h2 i {
+        font-size: 18px;
+    }
+
+    &.error {
+        font-weight: 400;
+    }
+
+    @media (min-width: $size-md) {
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
+
+.submitting {
+    .spinner {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

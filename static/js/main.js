@@ -5,21 +5,65 @@ app.config(['$locationProvider', function($locationProvider) {
 }]);
 
 app.run(function() {
-	FastClick.attach(document.body);
+    FastClick.attach(document.body);
 });
 
-app.controller('WeddingController', ['$location', '$document', '$scope', function($location, $document, $scope) {
+app.controller('WeddingController', ['$location', '$document', '$scope', '$http', function($location, $document, $scope, $http) {
+    var googleUrl = 'https://docs.google.com/a/averill-potter-wedding.com/forms/d/1TjrFY7PgQmRGir1tFN4fVgggf6cATYuh_UMrJFASfTk/formResponse';
+
     $scope.mobileMenu = false;
 
-    $scope.rsvp = {
-        attending: null,
-        childrenUnder4: [],
-        children4AndOlder: [],
-        food: {
-            beef: null,
-            fish: null,
-            veggie: null
+    var createNewRsvp = function () {
+        return {
+            attending: null,
+            childrenUnder4: [],
+            children4AndOlder: []
         }
+    };
+
+    $scope.rsvp = createNewRsvp();
+    $scope.rsvpSubmitted = false;
+    $scope.submittingRsvp = false;
+    $scope.rsvpError = null;
+
+    var getChildrenJoined = function(children) {
+        return _.map(children, function(o) {
+            return o.name;
+        }).join(', ');
+    };
+
+    $scope.submitRsvp = function() {
+        if(!$scope.readyToSubmit()) {
+            return;
+        }
+
+        $scope.submittingRsvp = true;
+        $http({
+            method: 'POST',
+            url: googleUrl,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            data: $.param({
+                'entry.236789417': $scope.rsvp.name,
+                'entry.812866607': $scope.rsvp.attending,
+                'entry.1026480432': $scope.rsvp.childrenUnder4.length ? getChildrenJoined($scope.rsvp.childrenUnder4) : '',
+                'entry.1667147661': $scope.rsvp.children4AndOlder.length ? getChildrenJoined($scope.rsvp.children4AndOlder) : ''
+            })
+        }).success(function() {
+            $scope.rsvpError = false;
+        }).error(function() {
+            $scope.rsvpError = true;
+        }).finally(function() {
+            $scope.submittingRsvp = false;
+            $scope.rsvpSubmitted = true;
+        });
+    };
+
+    $scope.getEmail = function() {
+        return 'apottere' + '@' + 'gmail.com';
+    };
+
+    $scope.showRsvpForm = function() {
+        return !$scope.submittingRsvp && !$scope.rsvpSubmitted;
     };
 
     $scope.childrenAreValid = function() {
@@ -38,10 +82,6 @@ app.controller('WeddingController', ['$location', '$document', '$scope', functio
         return $scope.rsvp.children ? $scope.childrenAreValid() : true;
     };
 
-    $scope.chosenFood = function () {
-        return $scope.rsvp.food.beef || $scope.rsvp.food.fish || $scope.rsvp.food.veggie;
-    };
-
     $scope.readyToSubmit = function() {
         if($scope.rsvp.attending === null || !$scope.rsvp.name) {
             return false;
@@ -51,7 +91,7 @@ app.controller('WeddingController', ['$location', '$document', '$scope', functio
             return true;
         }
 
-        return $scope.addedChildren() && $scope.chosenFood();
+        return $scope.addedChildren();
     };
 
     $scope.addChild = function(list) {

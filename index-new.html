@@ -90,7 +90,7 @@
                     <p class="section-header rsvp-header">RSVP</p>
                 </div>
 
-                <form class="form-horizontal col-md-6 col-md-offset-3 text-left" data-ng-submit="submitRsvp()" data-ng-show="!rsvpSubmitted">
+                <form class="form-horizontal col-md-6 col-md-offset-3 text-left" data-ng-submit="submitRsvp()" data-ng-if="showRsvpForm()">
 
                     <div class="form-group">
                         <label for="rsvp-name" class="control-label col-md-3">Name(s)</label>
@@ -125,15 +125,15 @@
                         <label class="control-label col-md-3">Under 4 years</label>
 
                         <div data-ng-repeat="child in rsvp.childrenUnder4">
-                            <div class="col-md-8 child-list-item" data-ng-class="{'col-md-offset-3': $index !== 0}">
+                            <div class="col-xs-10 col-md-8 child-list-item" data-ng-class="{'col-md-offset-3': $index !== 0}">
                                 <input type="text" placeholder="Name" class="form-control" data-ng-model="child.name">
                             </div>
-                            <div class="col-md-1 text-left">
+                            <div class="col-xs-2 col-md-1 text-left">
                                 <a href="javascript:void(0);" data-ng-click="removeChild(rsvp.childrenUnder4, $index)"><i class="glyphicon glyphicon-trash text-danger delete-child"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-md-9" data-ng-class="{'col-md-offset-3': rsvp.childrenUnder4.length}">
+                        <div class="col-xs-12 col-md-9" data-ng-class="{'col-md-offset-3': rsvp.childrenUnder4.length}">
                             <a href="javascript:void(0);" data-ng-click="addChild(rsvp.childrenUnder4)"><i class="glyphicon glyphicon-plus text-success add-child"></i><span class="text-success"> Add</span></a>
                         </div>
                     </div>
@@ -155,33 +155,7 @@
                         </div>
                     </div>
 
-                    <div data-ng-show="isAttending()">
-                        <hr class="divider rsvp-divider col-md-offset-2">
-
-                        <div class="form-group">
-                            <label for="rsvp-beef" class="control-label col-md-3">Beef</label>
-                            <div class="col-md-2">
-                                <input id="rsvp-beef" type="number" min="0" placeholder="#" class="form-control" data-ng-model="rsvp.food.beef">
-                            </div>
-                            <span class="col-md-7">Roasted rib eye of beef with braised daube of beef, roasted fingerling potatoes, and grilled zucchini</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="rsvp-fish" class="control-label col-md-3">Fish</label>
-                            <div class="col-md-2">
-                                <input id="rsvp-fish" type="number" min="0" placeholder="#" class="form-control" data-ng-model="rsvp.food.fish">
-                            </div>
-                            <span class="col-md-7">Grilled salmon with tomato confit, haricot vert, goat cheese gnocchi, and parsley sauce</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="rsvp-veggie" class="control-label col-md-3">Vegetarian</label>
-                            <div class="col-md-2">
-                                <input id="rsvp-veggie" type="number" min="0" placeholder="#" class="form-control" data-ng-model="rsvp.food.veggie">
-                            </div>
-                            <span class="col-md-7">Gnocchi with root vegetables, spinach, and shiitake mushrooms in brown butter sage sauce with ricotta salata</span>
-                        </div>
-                    </div>
+                    <hr class="divider rsvp-divider col-md-offset-2" data-ng-show="readyToSubmit()">
 
                     <div class="form-group" data-ng-show="readyToSubmit()">
                         <div class="col-md-9 col-md-offset-3">
@@ -190,6 +164,26 @@
                     </div>
 
                 </form>
+
+                <div class="col-md-12 text-center submitting" data-ng-if="submittingRsvp">
+                    <div class="spinner"></div>
+                    <span>Sending...</span>
+                </div>
+
+                <div class="col-md-12 text-center submitted" data-ng-if="rsvpSubmitted && !rsvpError">
+                    <div><h2><i class="glyphicon glyphicon-ok text-success"></i> Thanks for your response!</h2></div>
+                    <div>
+                        <span data-ng-if="isAttending()">We look forward to seeing you!</span>
+                        <span data-ng-if="!isAttending()">We're sorry you can't make it.</span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center submitted error" data-ng-if="rsvpSubmitted && rsvpError">
+                    <div><h2><i class="glyphicon glyphicon-exclamation-sign text-danger"></i> Something went wrong...</h2></div>
+                    <div>
+                        <span>You can either try again later or email your information to <span class="text-info" data-ng-bind="getEmail()"></span></span>
+                    </div>
+                </div>
             </div>
 
             <div id="venues" class="row text-center page">
